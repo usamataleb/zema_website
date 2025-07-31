@@ -1,34 +1,35 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Topbar from "./components/Topbar";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+
 
 function App() {
-  const [count, setCount] = useState(0);
- 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="App">
+        <div id="page" className="full-page">
+          <Topbar />
+          <Navbar />
+          <main id="content" className="site-main">
+            <Routes>
+              <Route path="/"  element={<Home />} />
+              <Route path="/about"  element={<About />} />
+             {/*  <Route path="/gallery"  element={<Gallery />} />
+              <Route path="/packages"  element={<Packages />} />
+              <Route path="/package/:id"  element={<Package />} />
+              <Route path="/contact"  element={<Contact />} />
+              <Route path="/tanzania"  element={<Tanzania />} />
+              <Route path="/zanzibar"  element={<Zanzibar />} />
+              <Route path="/zanexcursion"  element={<ZanExcursion />} />
+              <Route path="/tansafari"  element={<TanSafari />} /> */}
+            </Routes>
+          </main>
+          {/* <Footer /> */}
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Router>
   );
 }
 
