@@ -32,6 +32,9 @@ const Navbar = () => {
           <a href="service.html" class="nav-item nav-link">
             Our Services
           </a>
+           <a href="gallery" class="nav-item nav-link">
+            Gallery
+          </a>
           <div class="nav-item dropdown">
             <a
               href="#"

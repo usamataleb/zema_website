@@ -26,7 +26,7 @@ function App() {
               <Route path="/tansafari"  element={<TanSafari />} /> */}
             </Routes>
           </main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </div>
     </Router>
