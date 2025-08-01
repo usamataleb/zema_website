@@ -1,8 +1,13 @@
 import React from "react";
 import Topbar from "../components/Topbar";
+import Slider from "../components/Slider";
 
 const Home = () => {
-  return <>Hello Wolcome Home Page</>;
+  return (
+    <>
+      <Slider />
+    </>
+  );
 };
 
 export default Home;
