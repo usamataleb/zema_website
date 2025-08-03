@@ -1,4 +1,4 @@
-const ContactStart  = () => {
+const Contact  = () => {
   return (
      <div className="container-xxl py-5">
         <div className="container">
@@ -51,4 +51,4 @@ const ContactStart  = () => {
     </div>
          );
 };
-    export default ContactStart
+    export default Contact;

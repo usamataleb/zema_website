@@ -8,12 +8,12 @@ import Leaders from "../components/Leaders";
 import Appointment from "../components/Appointment";
 import Carousel from "../components/Carousel";
 import Facts from "../components/Facts";
-import ContactStart from "../components/ContactStart ";
+import ContactStart from "../components/Contact ";
 
 const Home = () => {
   return (
     <>
-      <Slider />
+      {/* <Slider />
       <Director />
       <Service />
       <Testimonial/>
@@ -21,8 +21,8 @@ const Home = () => {
       <Leaders/>
       <Appointment/>
       <Carousel/>
-      <Facts/>
-      <ContactStart/>
+      <Facts/> */}
+      {/* <ContactStart/> */}
       
     </>
   );
