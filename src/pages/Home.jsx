@@ -10,13 +10,15 @@ import Contact from "../components/Contact "
 const Home = () => {
   return (
     <>
+      <Slider />
+      <Director />
       <Features />
       <Leaders />
       <Appointment />
       <Facts />
       <Contact />
-      <Director />
-      <Slider />
+      
+  
       <Service />
     </>
   );
