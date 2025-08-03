@@ -42,8 +42,8 @@ const Features = () => {
                     </div>
                 </div>
                 <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div className="position-relative rounded overflow-hidden h-100" style="min-height: 400px;">
-                        <img className="position-absolute w-100 h-100" src="img/feature.jpg" alt="" style="object-fit: cover;"/>
+                    <div className="position-relative rounded overflow-hidden h-100" style={{ minHeight: "400px" }}>
+                        <img className="position-absolute w-100 h-100" src="img/feature.jpg" alt="" style={{ objectFit: "cover" }}/>
                     </div>
                 </div>
             </div>

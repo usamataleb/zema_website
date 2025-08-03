@@ -29,35 +29,31 @@ const Navbar = () => {
           <a href="about" className="nav-item nav-link">
             About Us
           </a>
-          <a href="service.html" className="nav-item nav-link">
+          <a href="service" className="nav-item nav-link">
             Our Services
           </a>
-           <a href="gallery" className="nav-item nav-link">
+          <a href="gallery" className="nav-item nav-link">
             Gallery
           </a>
+          <a href="news" className="nav-item nav-link">
+            News and Events
+          </a>
+
           <div className="nav-item dropdown">
             <a
               href="#"
               className="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
             >
-              Pages
+              Blog
             </a>
+
             <div className="dropdown-menu bg-light border-0 m-0">
               <a href="feature.html" className="dropdown-item">
-                Features
+                News and Events
               </a>
               <a href="appointment.html" className="dropdown-item">
-                Appointment
-              </a>
-              <a href="team.html" className="dropdown-item">
-                Team Members
-              </a>
-              <a href="testimonial.html" className="dropdown-item">
-                Testimonial
-              </a>
-              <a href="404.html" className="dropdown-item">
-                404 Page
+                Press Release
               </a>
             </div>
           </div>

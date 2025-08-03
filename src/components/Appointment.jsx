@@ -43,7 +43,7 @@ const Appointment = () => {
                                 </div>
                                 <div className="col-12">
                                     <div className="form-floating">
-                                        <textarea className="form-control" placeholder="Leave a message here" id="message" style="height: 80px"></textarea>
+                                        <textarea className="form-control" placeholder="Leave a message here" id="message" style={{ height: "80px" }}></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>

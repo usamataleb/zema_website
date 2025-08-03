@@ -1,4 +1,3 @@
-import React from "react";
 
 const Slider = () => {
   return (
@@ -11,7 +10,7 @@ const Slider = () => {
         >
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img className="w-100" src="img/carousel-1.jpg" alt="Image" />
+              <img className="w-100" src="./img/carousel-1.jpg" alt="Image" />
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row">

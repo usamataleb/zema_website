@@ -2,7 +2,7 @@ const Service = () => {
   return (
     <div className="container-xxl py-5">
         <div className="container">
-            <div className="text-center mx-auto" style="max-width: 500px;">
+            <div className="text-center mx-auto" style={{ maxWidth: "500px" }}>
                 <h1 className="display-6 mb-5">We Provide professional Insurance Services</h1>
             </div>
             <div className="row g-4 justify-content-center">
