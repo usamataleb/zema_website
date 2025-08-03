@@ -7,19 +7,20 @@ import Features from "../components/Features ";
 import Leaders from "../components/Leaders";
 import Appointment from "../components/Appointment";
 import Facts from "../components/Facts";
-import ContactStart from "../components/ContactStart ";
+import ContactStart from "../components/Contact ";
 
 const Home = () => {
   return (
     <>
-      <Slider />
+      {/* <Slider />
       <Director />
       <Service />
       <Features/>
       <Leaders/>
       <Appointment/>
+      <Carousel/>
       <Facts/>
-      <Testimonial/>
+      <ContactStart/>
       
     </>
   );
