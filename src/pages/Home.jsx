@@ -6,7 +6,7 @@ import Features from "../components/Features ";
 import Leaders from "../components/Leaders";
 import Appointment from "../components/Appointment";
 import Facts from "../components/Facts";
-import Contact from "../components/Contact "
+import Contact from "../components/Contact"
 const Home = () => {
   return (
     <>
