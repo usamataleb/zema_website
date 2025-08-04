@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Footer from "./components/Footer";
 import Service from "./pages/Service";
 import News from  "./pages/News";
-import Gallery from "./pages /Gallery";
+import Gallery from "./pages/Gallery";
 
 
 function App() {
