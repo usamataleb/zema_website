@@ -1,4 +1,4 @@
-
+//main
 const Slider = () => {
   return (
     <>
@@ -11,16 +11,16 @@ const Slider = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img className="w-100" src="./img/carousel-1.jpg" alt="Image" />
+             
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row">
                     <div className="col-12 col-lg-6">
                       <h1 className="display-3 text-dark mb-4 animated slideInDown">
-                        Insurance Creates Wealth For Everyone
+                        {/* Insurance Creates Wealth For Everyone */}
                       </h1>
                       <p className="fs-5 text-body mb-5">
-                        Clita erat ipsum et lorem et sit, sed stet lorem sit
-                        clita duo justo magna dolore erat amet
+                      EKA MAELEZO PICHA YA 1
                       </p>
                       <a href="" className="btn btn-primary py-3 px-5">
                         More Details
@@ -31,17 +31,17 @@ const Slider = () => {
               </div>
             </div>
             <div className="carousel-item">
-              <img className="w-100" src="img/carousel-2.jpg" alt="Image" />
+              {/* /hapa */}
+              <img className="w-100" src="img/carousel-2.jpg" alt="Image" />  
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row">
                     <div className="col-12 col-lg-6">
                       <h1 className="display-3 text-dark mb-4 animated slideInDown">
-                        The Best Insurance Begins Here
+                        EKA MAELEZO
                       </h1>
                       <p className="fs-5 text-body mb-5">
-                        Clita erat ipsum et lorem et sit, sed stet lorem sit
-                        clita duo justo magna dolore erat amet
+                        eka maelezo kuhusus picha nyengine
                       </p>
                       <a href="" className="btn btn-primary py-3 px-5">
                         More Details
