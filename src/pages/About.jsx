@@ -1,10 +1,12 @@
 import React from 'react'
 import Facts from '../components/Facts'
 import Team from '../components/Team '
+import AboutZEMA from '../components/AboutZEMA'
 
 const About = () => {  
   return (
     <>
+    <AboutZEMA />
      <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">

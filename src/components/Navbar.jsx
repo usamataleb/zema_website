@@ -76,7 +76,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <a href="contact.html" className="nav-item nav-link">
+          <a href="contactus" className="nav-item nav-link">
             Wasiliana Nasi
           </a>
         </div>
