@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Footer from "./components/Footer";
 import Service from "./pages/Service";
 import News from  "./pages/News";
+import Gallery from "./pages/Gallery";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Route path="/about"  element={<About />} />
               <Route path="/news" element={<News />} />
               <Route path="/service" element={<Service />} />
+              <Route path="/gallery" element={<Gallery />} />
               {/* <Route path="/organiztionstructure" element={<OrganizationStructure />}
                <Route path="/gallery"  element={<Gallery />} />
               <Route path="/packages"  element={<Packages />} />
