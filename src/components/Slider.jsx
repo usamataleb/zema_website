@@ -1,54 +1,57 @@
-const slides = [
-  {
-    image: './img/carousel-1.jpg',
-    title: 'PICHA YA 1',
-    description: 'EKA MAELEZO PICHA YA 1',
-    link: '#',
-    isActive: true,
-  },
-  {
-    image: './img/carousel-2.jpg',
-    title: 'PICHA YA 2',
-    description: 'eka maelezo kuhusus picha nyengine',
-    link: '#',
-    isActive: false,
-  },
-];
+// const slides = [
+//   {
+//     image: './img/carousel-1.jpg',
+//     title: 'PICHA YA 1',
+//     description: 'EKA MAELEZO PICHA YA 1',
+//     link: '#',
+//     isActive: true,
+//   },
+//   {
+//     image: './img/carousel-2.jpg',
+//     title: 'PICHA YA 2',
+//     description: 'eka maelezo kuhusus picha nyengine',
+//     link: '#',
+//     isActive: false,
+//   },
+// ];
 
 const Slider = () => {
   return (
-      <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          {slides.map((item, index) => (
-            <div
-              className={`carousel-item ${index === 0 ? 'active' : ''}`}
-              key={index}
-            >
-              <img className="carousel-img" src={item.image} alt={`Slide ${index + 1}`} />
-            </div>
-          ))}
-        </div>
-
-        {/* Controls */}
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#header-carousel"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#header-carousel"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+     <div class="container">
+  <h3 class="text-center text-uppercase">
+    Custom Bootstrap Carousel
+  </h3>
+  <div class="row">
+    <div class="col-lg-10 col-md-8 col-sm-12 mx-auto my-5">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1561877202-53d0e24be55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1561622245-4d9cd72441a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1508724735996-b41f69dfe2a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1156&q=80" class="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+    </div>
+  </div>
+</div>
   );
 };
 
