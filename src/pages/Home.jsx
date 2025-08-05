@@ -11,7 +11,8 @@ import DocumentSlider from "../components/DocumentSlider";
 const Home = () => {
   return (
     <>
-      <DocumentSlider /> <Director />
+      <DocumentSlider />
+      <Director />
       <Service />
       {/* <Features /> */}
       {/* <Appointment /> */}

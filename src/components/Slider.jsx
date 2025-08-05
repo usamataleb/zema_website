@@ -17,7 +17,6 @@ const slides = [
 
 const Slider = () => {
   return (
-    <div className="container p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
       <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           {slides.map((item, index) => (
@@ -50,7 +49,6 @@ const Slider = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-    </div>
   );
 };
 
