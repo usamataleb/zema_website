@@ -2,15 +2,14 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+    <nav className="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5">
       <a href="index.html" className="navbar-brand d-flex align-items-center">
         <h1 className="m-0">
           <img
             className="img-fluid me-3"
-            src="img/icon/icon-02-primary.png"
-            alt=""
-          />
-          Insure
+            src="./img/logo/SMZ.png"
+            alt="SMZ Logo"
+          />{" "}
         </h1>
       </a>
       <button
@@ -24,19 +23,16 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
           <a href="/" className="nav-item nav-link active">
-            Home
+            Nyumbani
           </a>
           <a href="about" className="nav-item nav-link">
-            About Us
+            Kuhusu Sisi
           </a>
           <a href="service" className="nav-item nav-link">
-            Our Services
+            Huduma Zetu
           </a>
           <a href="gallery" className="nav-item nav-link">
-            Gallery
-          </a>
-          <a href="news" className="nav-item nav-link">
-            News and Events
+            Picha
           </a>
 
           <div className="nav-item dropdown">
@@ -45,26 +41,53 @@ const Navbar = () => {
               className="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
             >
-              Blog
+              Habari na Matukio
             </a>
 
             <div className="dropdown-menu bg-light border-0 m-0">
               <a href="feature.html" className="dropdown-item">
-                News and Events
+                Matukio
               </a>
               <a href="appointment.html" className="dropdown-item">
-                Press Release
+                Taarifa kwa Vyombo vya Habari
               </a>
             </div>
           </div>
+
+          <div className="nav-item dropdown">
+            <a
+              href="#"
+              className="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              Kumbukumbu
+            </a>
+
+            <div className="dropdown-menu bg-light border-0 m-0">
+              <a href="feature.html" className="dropdown-item">
+                Ripoti
+              </a>
+              <a href="appointment.html" className="dropdown-item">
+                Kanuni na Taratibu
+              </a>
+              <a href="appointment.html" className="dropdown-item">
+                Sera na
+              </a>
+            </div>
+          </div>
+
           <a href="contact.html" className="nav-item nav-link">
-            Contact Us
+            Wasiliana Nasi
           </a>
         </div>
       </div>
-      <a href="" className="btn btn-primary px-3 d-none d-lg-block">
-        Get A Quote
-      </a>
+
+      <img
+        className="navbar-brand d-flex align-items-center"
+        src="./img/logo/znz-flag.gif"
+        alt="Zanzibar Flag"
+        height={"97px"}
+      />
     </nav>
   );
 };
