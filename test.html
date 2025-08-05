@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIPA Document Slider</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .slider-container {
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .dark-panel {
+            background: #1a1a1a;
+            border-radius: 10px;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .document-panel {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .tab-nav {
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #6c757d;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-button:hover {
+            color: #495057;
+            background: #f8f9fa;
+        }
+        
+        .tab-button.active {
+            color: #ffc107;
+            border-bottom-color: #ffc107;
+            background: #f8f9fa;
+        }
+        
+        .document-content {
+            background: linear-gradient(180deg, #e3f2fd, #e8f5e8);
+            min-height: 450px;
+        }
+        
+        .zipa-header {
+            color: #1565c0;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .document-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #212529;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+        
+        .document-subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 25px;
+        }
+        
+        .document-text {
+            color: #495057;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+        
+        .signature-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .signature-line {
+            width: 120px;
+            height: 1px;
+            background: #6c757d;
+            margin: 10px auto;
+        }
+        
+        .signature-title {
+            font-weight: 600;
+            color: #212529;
+        }
+        
+        .signature-org {
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .document-footer {
+            border-top: 1px solid #dee2e6;
+            padding-top: 15px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
+        .nav-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-dot:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .nav-dot.active {
+            background: #ffc107;
+        }
+        
+        .icon-placeholder {
+            font-size: 80px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="slider-container p-4">
+            <div class="row g-4">
+                <!-- Left Panel -->
+                <div class="col-md-6">
+                    <div class="dark-panel">
+                        <div class="icon-placeholder" id="iconPlaceholder">🏛️</div>
+                    </div>
+                </div>
+                
+                <!-- Right Panel -->
+                <div class="col-md-6">
+                    <div class="document-panel">
+                        <!-- Tab Navigation -->
+                        <div class="tab-nav d-flex">
+                            <button class="tab-button active" onclick="switchTab('NOTICE', this)">NOTICE</button>
+                            <button class="tab-button" onclick="switchTab('ANNOUNCEMENTS', this)">ANNOUNCEMENTS</button>
+                            <button class="tab-button" onclick="switchTab('PRESS RELEASE', this)">PRESS RELEASE</button>
+                        </div>
+                        
+                        <!-- Document Content -->
+                        <div class="document-content p-4" id="documentContent">
+                            <div class="text-center">
+                                <div class="zipa-header">🏛️ ZANZIBAR INVESTMENT PROMOTION AUTHORITY</div>
+                                <div class="document-title" id="docTitle">SPECIAL NOTICE</div>
+                                <div class="document-subtitle" id="docSubtitle">INVESTORS WITHOUT LAND LEASE AGREEMENTS</div>
+                            </div>
+                            
+                            <div class="document-text" id="docText">
+                                <p>The Zanzibar Investment Promotion Authority (ZIPA) kindly requests all Approved investors who have been issued and approved Investment License but do not have land lease agreement to contact ZIPA at their earliest convenience.</p>
+                                
+                                <p>This initiative is intended to identify challenges that may be delaying the lease process, and to ensure that all approved projects proceed smoothly with their intended projects.</p>
+                                
+                                <p>We appreciate your cooperation and remain committed to providing continued support throughout your investment journey in Zanzibar.</p>
+                            </div>
+                            
+                            <div class="signature-section">
+                                <div class="text-muted small">Issued by</div>
+                                <div class="signature-line"></div>
+                                <div class="signature-title" id="signedBy">Executive Director</div>
+                                <div class="signature-org">Zanzibar Investment Promotion Authority</div>
+                            </div>
+                            
+                            <div class="document-footer d-flex justify-content-between">
+                                <span>www.zipa.go.tz</span>
+                                <span>info@zipa.go.tz</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Dots -->
+            <div class="nav-dots">
+                <button class="nav-dot active" onclick="switchTabByIndex(0)"></button>
+                <button class="nav-dot" onclick="switchTabByIndex(1)"></button>
+                <button class="nav-dot" onclick="switchTabByIndex(2)"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const documentData = {
+            'NOTICE': {
+                title: "SPECIAL NOTICE",
+                subtitle: "INVESTORS WITHOUT LAND LEASE AGREEMENTS",
+                content: [
+                    "The Zanzibar Investment Promotion Authority (ZIPA) kindly requests all Approved investors who have been issued and approved Investment License but do not have land lease agreement to contact ZIPA at their earliest convenience.",
+                    "This initiative is intended to identify challenges that may be delaying the lease process, and to ensure that all approved projects proceed smoothly with their intended projects.",
+                    "We appreciate your cooperation and remain committed to providing continued support throughout your investment journey in Zanzibar."
+                ],
+                signedBy: "Executive Director",
+                icon: "🏛️"
+            },
+            'ANNOUNCEMENTS': {
+                title: "INVESTMENT ANNOUNCEMENT",
+                subtitle: "NEW INVESTMENT OPPORTUNITIES IN ZANZIBAR",
+                content: [
+                    "The Zanzibar Investment Promotion Authority announces new investment opportunities in the tourism and manufacturing sectors. We invite both local and international investors to explore these exciting prospects.",
+                    "Key sectors include: Tourism and hospitality, Manufacturing and processing, Agriculture and fisheries, Information and communication technology.",
+                    "For more information and application procedures, please contact our investment facilitation team."
+                ],
+                signedBy: "Investment Director",
+                icon: "📢"
+            },
+            'PRESS RELEASE': {
+                title: "PRESS RELEASE",
+                subtitle: "ZIPA ACHIEVEMENTS IN INVESTMENT PROMOTION",
+                content: [
+                    "Zanzibar Investment Promotion Authority reports significant growth in foreign direct investment for the current fiscal year. The authority has successfully facilitated over 150 new investment projects worth $2.5 billion.",
+                    "This achievement demonstrates Zanzibar's growing reputation as an attractive investment destination in East Africa. The government continues to implement investor-friendly policies and improve the ease of doing business.",
+                    "We remain committed to supporting investors and promoting sustainable economic development in Zanzibar."
+                ],
+                signedBy: "Communications Manager",
+                icon: "📰"
+            }
+        };
+
+        let currentTab = 'NOTICE';
+        const tabs = ['NOTICE', 'ANNOUNCEMENTS', 'PRESS RELEASE'];
+
+        function switchTab(tabName, buttonElement) {
+            currentTab = tabName;
+            
+            // Update tab buttons
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            buttonElement.classList.add('active');
+            
+            // Update content
+            updateContent();
+            
+            // Update navigation dots
+            const tabIndex = tabs.indexOf(tabName);
+            document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === tabIndex);
+            });
+        }
+
+        function switchTabByIndex(index) {
+            const tabName = tabs[index];
+            const tabButton = document.querySelectorAll('.tab-button')[index];
+            switchTab(tabName, tabButton);
+        }
+
+        function updateContent() {
+            const data = documentData[currentTab];
+            
+            document.getElementById('docTitle').textContent = data.title;
+            document.getElementById('docSubtitle').textContent = data.subtitle;
+            document.getElementById('signedBy').textContent = data.signedBy;
+            document.getElementById('iconPlaceholder').textContent = data.icon;
+            
+            // Update document text
+            const textContainer = document.getElementById('docText');
+            textContainer.innerHTML = '';
+            data.content.forEach(paragraph => {
+                const p = document.createElement('p');
+                p.textContent = paragraph;
+                textContainer.appendChild(p);
+            });
+        }
+
+        // Initialize the slider
+        updateContent();
+    </script>
+</body>
+</html>

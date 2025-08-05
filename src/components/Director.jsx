@@ -21,58 +21,53 @@ const Director = () => {
                 style={{ width: "200px", height: "200px" }}
               >
                 <div className="d-flex flex-column justify-content-center text-center bg-primary rounded h-100 p-3">
-                  <h1 className="text-white mb-0">25</h1>
-                  <h2 className="text-white">Years</h2>
-                  <h5 className="text-white mb-0">Experience</h5>
+                  <h2 className="text-white">ZEMA</h2>
+                  <h5 className="text-white mb-0">Director General</h5>
                 </div>
               </div>
             </div>
           </div>
           <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
             <div className="h-100">
-              <h1 className="display-6 mb-5">
-                We're Here To Assist You With Exploring Protection
-              </h1>
-              <p className="fs-5 text-primary mb-4">
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet
-                lorem sit clita duo justo erat amet
-              </p>
-              <div className="row g-4 mb-4">
-                <div className="col-sm-6">
-                  <div className="d-flex align-items-center">
-                    <img
-                      className="flex-shrink-0 me-3"
-                      src="img/icon/icon-04-primary.png"
-                      alt=""
-                    />
-                    <h5 className="mb-0">Flexible Insurance Plans</h5>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="d-flex align-items-center">
-                    <img
-                      className="flex-shrink-0 me-3"
-                      src="img/icon/icon-03-primary.png"
-                      alt=""
-                    />
-                    <h5 className="mb-0">Money Back Guarantee</h5>
-                  </div>
-                </div>
-              </div>
-              <p className="mb-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
-              </p>
-              <div className="border-top mt-4 pt-4">
-                <div className="d-flex align-items-center">
-                  <img
-                    className="flex-shrink-0 rounded-circle me-3"
-                    src="img/profile.jpg"
-                    alt=""
-                  />
-                  <h5 className="mb-0">Call Us: +012 345 6789</h5>
-                </div>
+              <h1 className="display-6 mb-5">Director Message</h1>
+
+              <div className="fs-5 mb-4 text-justify">
+                <p>Dear Visitors,</p>
+
+                <p>
+                  On behalf of the Zanzibar Environmental Management Authority
+                  (ZEMA), I am very much delighted to have this opportunity to
+                  welcome you to our official website.
+                </p>
+
+                <p>
+                  Through this website you will find useful information
+                  regarding environment issues in Zanzibar such as Environment
+                  Policy of 2013, Environmental Management Act, 2015,
+                  Regulations and other environmental procedures.
+                </p>
+
+                <p>
+                  We do hope on this website, you will find all the undertakings
+                  of ZEMA as a regulatory body of our environment as well as the
+                  service we provide to realize the harmony of our environment
+                  and its sustainable development.
+                </p>
+
+                <p>
+                  We advance our sincere thanks for your visit and don’t
+                  hesitate to contact us for any extra information regarding
+                  environmental management in Zanzibar.
+                </p>
+
+                <p>I thank you,</p>
+
+                <p>
+                  <strong>
+                    Sheha M Juma <br />
+                    Director General – ZEMA
+                  </strong>
+                </p>
               </div>
             </div>
           </div>

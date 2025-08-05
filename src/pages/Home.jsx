@@ -6,20 +6,18 @@ import Features from "../components/Features ";
 import Leaders from "../components/Leaders";
 import Appointment from "../components/Appointment";
 import Facts from "../components/Facts";
-import Contact from "../components/Contact"
+import Contact from "../components/Contact";
+import DocumentSlider from "../components/DocumentSlider";
 const Home = () => {
   return (
     <>
-      <Slider />
-      <Director />
-      <Features />
-      <Leaders />
-      <Appointment />
-      <Facts />
-      <Contact />
-      
-  
+      <DocumentSlider /> <Director />
       <Service />
+      {/* <Features /> */}
+      {/* <Appointment /> */}
+      {/* <Facts /> */}
+      {/* <Contact /> */}
+      <Leaders />
     </>
   );
 };
