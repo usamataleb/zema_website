@@ -3,7 +3,7 @@ const Leaders = () => {
    <div className="container-xxl py-5">
         <div className="container">
             <div className="text-center mx-auto" style={{ maxWidth: "500px" }}>
-                <h1 className="display-6 mb-5">Meet Our Professional Team Members</h1>
+                <h1 className="display-6 mb-0">VIONGOZI WA ZEMA</h1>
             </div>
             <div className="row g-4">
                 <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -16,12 +16,6 @@ const Leaders = () => {
                         <div className="team-text text-center bg-white p-4">
                             <h5>Full Name</h5>
                             <p>Designation</p>
-                            <div className="d-flex justify-content-center">
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-twitter"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-facebook-f"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-youtube"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-linkedin-in"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -35,12 +29,6 @@ const Leaders = () => {
                         <div className="team-text text-center bg-white p-4">
                             <h5>Full Name</h5>
                             <p>Designation</p>
-                            <div className="d-flex justify-content-center">
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-twitter"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-facebook-f"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-youtube"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-linkedin-in"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -54,12 +42,7 @@ const Leaders = () => {
                         <div className="team-text text-center bg-white p-4">
                             <h5>Full Name</h5>
                             <p>Designation</p>
-                            <div className="d-flex justify-content-center">
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-twitter"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-facebook-f"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-youtube"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-linkedin-in"></i></a>
-                            </div>
+                        
                         </div>
                     </div>
                 </div>
@@ -73,12 +56,7 @@ const Leaders = () => {
                         <div className="team-text text-center bg-white p-4">
                             <h5>Full Name</h5>
                             <p>Designation</p>
-                            <div className="d-flex justify-content-center">
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-twitter"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-facebook-f"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-youtube"></i></a>
-                                <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-linkedin-in"></i></a>
-                            </div>
+                        
                         </div>
                     </div>
                 </div>
