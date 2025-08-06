@@ -1,14 +1,10 @@
       /* External CSS Styles */
-        .slider-container {
-            background: linear-gradient(135deg, #3b82f6, #1e40af);
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
+
         
         .dark-panel {
             background: #1a1a1a;
             border-radius: 10px;
-            min-height: 500px;
+            width: 100%;
         }
         
         .document-panel {

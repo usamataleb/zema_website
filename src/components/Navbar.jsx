@@ -2,6 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
+    <>
     <nav className="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5">
       <a href="index.html" className="navbar-brand d-flex align-items-center">
         <h1 className="m-0">
@@ -89,6 +90,7 @@ const Navbar = () => {
         height={"97px"}
       />
     </nav>
+        </>
   );
 };
 
