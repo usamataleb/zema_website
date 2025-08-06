@@ -20,6 +20,7 @@ const Navbar = () => {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
+      <h1>Mamlaka ya Mazingira zanzibar</h1>
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
           <a href="/" className="nav-item nav-link active">

@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import Service from "./pages/Service";
 import News from "./pages/News";
 import Gallery from "./pages/Gallery";
-import Header from "./components/Header";
 import History from "./pages/History";
 import Objective from "./pages/Objective";
 import Contactus from "./pages/Contactus";
