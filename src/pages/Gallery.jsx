@@ -1,5 +1,5 @@
 import React from "react";
-import LightBox from "../components/lightBox";
+import LightBox from "../components/LightBox";
 
 const Gallery = () => {
   return (

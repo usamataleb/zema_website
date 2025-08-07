@@ -8,10 +8,14 @@ import Appointment from "../components/Appointment";
 import Facts from "../components/Facts";
 import Contact from "../components/Contact";
 import Panels from "../components/Panels";
+import Intro from "../components/Intro";
 const Home = () => {
   return (
     <>
-        <Panels />
+      <Panels />
+      <div className="container">
+        <Intro />
+      </div>
       <Director />
       <Service />
       {/* <Features /> */}
