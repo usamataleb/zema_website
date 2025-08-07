@@ -31,7 +31,7 @@ const Navbar = () => {
             Nyumbani
           </a>
           <a href="about" className="nav-item nav-link">
-            Kuhusu Sisi
+            Kuhusu Zema
           </a>
           <a href="service" className="nav-item nav-link">
             Huduma Zetu
@@ -50,10 +50,10 @@ const Navbar = () => {
             </a>
 
             <div className="dropdown-menu bg-light border-0 m-0">
-              <a href="feature.html" className="dropdown-item">
+              <a href="feature" className="dropdown-item">
                 Matukio
               </a>
-              <a href="appointment.html" className="dropdown-item">
+              <a href="appointment" className="dropdown-item">
                 Taarifa kwa Vyombo vya Habari
               </a>
             </div>

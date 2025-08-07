@@ -9,8 +9,6 @@ const About = () => {
     <>
     <AboutZEMA />
     <Facts />
-    <Team />
-    <AboutZEMA />
     <Director />
     {/* <Facts /> */}
     <Leaders />

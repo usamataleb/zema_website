@@ -10,7 +10,6 @@ h3 {
   cursor: -webkit-grabbing;
 
   & img {
-    border-radius: 30px;
     height: 500px;
 
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.21);
