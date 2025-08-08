@@ -28,7 +28,6 @@ const Slider = () => {
             </div>
           ))}
         </div>
-
         {/* Controls */}
         <button
           className="carousel-control-prev"
