@@ -13,9 +13,6 @@ const Home = () => {
   return (
     <>
       <Panels />
-      <div className="container">
-        <Intro />
-      </div>
       <Director />
       <Service />
       {/* <Features /> */}

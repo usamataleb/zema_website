@@ -17,13 +17,6 @@ const Topbar = () => {
           </div>
         </div>
 
-        {/* Center: Heading */}
-        <div className="col-lg-6 text-center">
-          <h2 className="text-white fw-bold mb-0">
-            Mamlaka ya Usimamizi wa Mazingira Zanzibar (ZEMA)
-          </h2>
-        </div>
-
         {/* Right: Search + Language + Social */}
         <div className="col-lg-3 px-4 text-end d-flex justify-content-end align-items-center">
 

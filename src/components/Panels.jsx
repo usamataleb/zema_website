@@ -54,12 +54,12 @@ const Panels = () => {
   };
 
   return (
-    <div className="container-fluid p-3" style={{ backgroundColor: "#c3c9cf" }}>
-      <div className="container my-5  " style={sliderStyles.container}>
+    <div className="container-fluid p-3 my-5" style={{ backgroundColor: "#c3c9cf" }}>
+      <div className="  my-5  px-0 px-md-0 px-lg-5 " style={sliderStyles.container}>
         <div className="p-4" style={sliderStyles.sliderContainer}>
           <div className="row g-4">
             {/* Left Panel */}
-            <div className="col-md-6" style={sliderStyles.leftPanel}>
+            <div className="col-md-7 px-0 px-md-0 px-lg-5 " style={sliderStyles.leftPanel}>
               <div
                 className="d-flex align-items-center justify-content-center"
                 style={sliderStyles.darkPanel}
@@ -69,8 +69,8 @@ const Panels = () => {
             </div>
 
             {/* Right Panel */}
-            <div className="col-md-6">
-              <div style={sliderStyles.documentPanel}>
+            <div className="col-md-5 px-0 px-md-0 px-lg-5 d-none d-md-block d-lg-block ">
+              <div style={sliderStyles.documentPanel} >
                 {/* Tab Navigation */}
                 <div className="d-flex" style={sliderStyles.tabNav}>
                   {tabs.map((tab) => (
@@ -166,7 +166,8 @@ const sliderStyles = {
     overflow: "hidden",
   },
   leftPanel: {
-    maxHeight: "90px",
+    maxHeight: "200px",
+    // width: "70%",
     padding: "20px",
   },
   tabNav: {

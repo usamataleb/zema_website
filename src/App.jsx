@@ -9,6 +9,7 @@ import News from "./pages/News";
 import Gallery from "./pages/Gallery";
 import History from "./pages/History";
 import Contactus from "./pages/Contactus";
+import Heading from "./components/Navbar.jsx";
 
 function App() {
   return (
