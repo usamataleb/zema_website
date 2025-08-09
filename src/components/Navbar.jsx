@@ -110,7 +110,7 @@ const Navbar = () => {
 
             {scrolled && (
               <div
-                className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0 mt-2"
+                className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0 mt-2 fade-in"
                 id="navbarOutohide"
               >
                 <a href="/" className="nav-item nav-link active">

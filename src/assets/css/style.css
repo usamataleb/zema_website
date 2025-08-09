@@ -132,7 +132,7 @@
     padding-left: 30px;
   }
 
-    #navbarOutohide {
+  #navbarOutohide {
     display: none;
   }
 }
@@ -155,7 +155,6 @@
     transition: 0.5s;
     opacity: 1;
   }
-
 }
 
 /*** Header ***/
@@ -163,6 +162,8 @@
   width: 100%;
   max-height: 600px;
   object-fit: cover;
+  border-radius: "10px";
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 .carousel-caption {
   top: 0;
