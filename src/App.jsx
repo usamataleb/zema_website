@@ -9,7 +9,7 @@ import News from "./pages/News";
 import Gallery from "./pages/Gallery";
 import History from "./pages/History";
 import Contactus from "./pages/Contactus";
-import Heading from "./components/Navbar.jsx";
+import NewsCard from "./components/NewsCard.jsx";
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/history" element={<History />} />
               <Route path="/contactus" element={<Contactus />} />
+              <Route path="/NewsCard" element={<NewsCard/>} />
               {/* <Route path="/habari" element={<Habari />} />/ */}
 
               {/* <Route path="/organiztionstructure" element={<OrganizationStructure />}

@@ -9,11 +9,17 @@ import Facts from "../components/Facts";
 import Contact from "../components/Contact";
 import Panels from "../components/Panels";
 import Intro from "../components/Intro";
+import RightPanel from "../components/rightpanel";
+import NewsEvents from "../components/NewsEvents";
 const Home = () => {
   return (
     <>
       <Panels />
+      {/* <div className="container">
+        <RightPanel />
+      </div> */}
       <Director />
+      <NewsEvents />
       <Service />
       {/* <Features /> */}
       {/* <Appointment /> */}

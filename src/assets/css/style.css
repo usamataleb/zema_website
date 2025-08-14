@@ -486,3 +486,151 @@
 .footer .copyright a:hover {
   color: #ffffff;
 }
+.footer .social a {
+  color: #a7a8b4;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+/* Dark Panel */
+.darkPanel {
+  background: #d1cece;
+  border-radius: 10px;
+  min-height: 500px;
+}
+.documentPanel {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.leftPanel {
+  max-height: 200px;
+  padding: 20px;
+}
+.tabNav {
+  border-bottom: 2px solid #e9ecef;
+}
+.tabButton {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+.tabButtonActive {
+  color: #ffc107;
+  border-bottom-color: #ffc107;
+  background: #f8f9fa;
+}
+.tabButtonHover {
+  color: #495057;
+  background: #f8f9fa;
+}
+.documentContent {
+  background: linear-gradient(180deg, #e3f2fd, #e8f5e8);
+  min-height: 450px;
+}
+.zipaHeader {
+  color: #1565c0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.documentTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #212529;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.documentSubtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 25px;
+}
+.documentText {
+  color: #495057;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+.signatureLine {
+  width: 120px;
+  height: 1px;
+  background: #6c757d;
+  margin: 10px auto;
+}
+.signatureTitle {
+  font-weight: 600;
+  color: #212529;
+}
+.signatureOrg {
+  font-size: 14px;
+  color: #6c757d;
+}
+.documentFooter {
+  border-top: 1px solid #dee2e6;
+  padding-top: 15px;
+  font-size: 12px;
+  color: #6c757d;
+}
+.navDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+.navDotActive {
+  background: #ffc107;
+}
+.iconPlaceholder {
+  font-size: 80px;
+  color: #6c757d;
+}
+
+
+/* Director Sample */
+.director-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 100px;
+}
+
+.director-card .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.director-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.director-card .card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.director-card:hover .card-overlay {
+  opacity: 1;
+}
