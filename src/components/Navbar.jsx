@@ -14,6 +14,7 @@ const Navbar = () => {
             className="img-fluid me-3"
             src="./img/logo/SMZ.png"
             alt="SMZ Logo"
+            style={{ width: "250px", height: "400px" }}
           />{" "}
         </h1>
       </a>
@@ -28,16 +29,16 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
           <a href="/" className="nav-item nav-link active">
-            Nyumbani
+            Home
           </a>
           <a href="about" className="nav-item nav-link">
-            Kuhusu Zema
+            About Us
           </a>
           <a href="service" className="nav-item nav-link">
-            Huduma Zetu
+            Our Services
           </a>
           <a href="gallery" className="nav-item nav-link">
-            Picha
+            Gallery
           </a>
 
           <div className="nav-item dropdown">
@@ -46,15 +47,15 @@ const Navbar = () => {
               className="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
             >
-              Habari na Matukio
+              News and Events
             </a>
 
             <div className="dropdown-menu bg-light border-0 m-0">
               <a href="feature" className="dropdown-item">
-                Matukio
+                Events
               </a>
               <a href="appointment" className="dropdown-item">
-                Taarifa kwa Vyombo vya Habari
+                Press Release
               </a>
             </div>
           </div>
@@ -65,24 +66,21 @@ const Navbar = () => {
               className="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
             >
-              Kumbukumbu
+              History
             </a>
 
             <div className="dropdown-menu bg-light border-0 m-0">
               <a href="feature.html" className="dropdown-item">
-                Ripoti
+                Reports
               </a>
               <a href="appointment.html" className="dropdown-item">
-                Kanuni na Taratibu
-              </a>
-              <a href="appointment.html" className="dropdown-item">
-                Sera na
+                Policies and Regulations
               </a>
             </div>
           </div>
 
           <a href="contactus" className="nav-item nav-link">
-            Wasiliana Nasi
+            Contact Us
           </a>
         </div>
       </div>

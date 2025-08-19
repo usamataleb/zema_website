@@ -9,18 +9,19 @@ const Topbar = () => {
         <div className="col-lg-3 px-4 text-start">
           <div className="h-100 d-inline-flex align-items-center me-3">
             <small className="fa fa-phone-alt me-2"></small>
-            <small>+255 123 456 789</small>
+            <small style={{ color: "white" }}>+255 123 456 789</small>
           </div>
           <div className="h-100 d-inline-flex align-items-center me-3">
             <small className="far fa-envelope-open me-2"></small>
-            <small>info@zema.go.tz</small>
+            <small style={{ color: "white" }}>info@zema.go.tz</small>
           </div>
         </div>
 
         {/* Center: Heading */}
         <div className="col-lg-6 text-center">
+          <h1 className="text-white fw-bold mb-0">First Vice President Officer-Zanzibar</h1>
           <h2 className="text-white fw-bold mb-0">
-            Mamlaka ya Usimamizi wa Mazingira Zanzibar (ZEMA)
+            Zanzibar Environmental Management Authority (ZEMA)
           </h2>
         </div>
 
