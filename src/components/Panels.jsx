@@ -1,5 +1,5 @@
 import Carousel from "./carousel";
-import Director from "../components/Director";
+import Directorsample from "../components/Directorsample";
 import RightPanel from "./rightpanel";
 
 
@@ -12,18 +12,18 @@ const Panels = () => {
 
   return (
     <div
-      className="container-fluid p-3 "
+      className="container-fluid p-3"
       style={{ backgroundColor: "#c3c9cf" }}
     >
       <div
-        className="  my-5  px-0 px-md-0 px-lg-5 "
+        className="my-5 px-0 px-md-0 px-lg-5"
         style={sliderStyles.container}
       >
         <div className="p-4" style={sliderStyles.sliderContainer}>
           <div className="row g-4">
             {/* Left Panel */}
             <div
-              className="col-md-7 px-0 px-md-0 px-lg-5 "
+              className="col-md-7 px-0 px-md-0 px-lg-5"
               style={sliderStyles.leftPanel}
             >
               <div
@@ -35,8 +35,8 @@ const Panels = () => {
             </div>
 
             {/* Right Panel */}
-            <div className="col-md-5 px-0 px-md-0 px-lg-5 d-none d-md-block d-lg-block ">
-              <RightPanel />
+            <div className="col-md-5 px-0 px-md-0 px-lg-5 d-none d-md-block d-lg-block">
+              <Directorsample />
             </div>
           </div>
         </div>

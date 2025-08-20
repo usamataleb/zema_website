@@ -5,11 +5,9 @@ const Intro = () => {
           <div className="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
               <div className="service-item rounded h-100 p-5">
               <div className="card-body">
-                <h5 className="card-title mb-0">ZEMA NI NINI</h5>
+                <h5 className="card-title mb-0">What is ZEMA?</h5>
                 <p className="card-text">
-                  Mamlaka ya Usimamizi wa Mazingira Zanzibar (ZEMA) imeanzishwa mwaka 2015 chini ya kifungu cha 14 cha Sheria ya Usimamizi wa Mazingira Zanzibar ya mwaka 2015.
-                  Lengo kuu ni kusimamia utekelezaji na uzingatiaji wa sheria, kanuni, miongozo na viwango vya mazingira kwa ajili ya kupunguza uchafuzi na uharibifu wa mazingira.
-                  Mamlaka hii inasimamiwa na Bodi iliyoanzishwa kwa mujibu wa kifungu cha 15(1) cha Sheria hiyo, na ina mamlaka ya kisheria ikiwa ni pamoja na uwezo wa kushitaki na kushitakiwa.
+                 The Zanzibar Environmental Management Authority (ZEMA) was established in 2015 under Section 14 of the Zanzibar Environmental Management Act of 2015. Its main objective is to oversee the implementation and enforcement of environmental laws, regulations, guidelines, and standards in order to reduce pollution and environmental degradation. The Authority is governed by a Board established under Section 15(1) of the same Act and has legal powers, including the capacity to sue and be sued.
                 </p>
                 <p className="card-text">
                 </p>

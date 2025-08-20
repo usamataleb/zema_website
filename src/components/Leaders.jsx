@@ -3,7 +3,7 @@ const Leaders = () => {
    <div className="container-xxl py-5">
         <div className="container">
             <div className="text-center mx-auto" style={{ maxWidth: "500px" }}>
-                <h1 className="display-6 mb-0">VIONGOZI WA ZEMA</h1>
+                <h1 className="display-6 mb-0">Leaders</h1>
             </div>
             <div className="row g-4">
                 <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">

@@ -9,23 +9,25 @@ import Facts from "../components/Facts";
 import Contact from "../components/Contact";
 import Panels from "../components/Panels";
 import Intro from "../components/Intro";
+import NewsEvent from "../components/NewsEvent";
 import RightPanel from "../components/rightpanel";
-import NewsEvents from "../components/NewsEvents";
 const Home = () => {
   return (
     <>
-      <Panels />
-      {/* <div className="container">
+    <Panels />
+     {/* <Director /> */}
+      <div className="container">
         <RightPanel />
-      </div> */}
-      <Director />
-      <NewsEvents />
-      <Service />
+        <Intro />
+      </div>
+     
+      <NewsEvent />
+      {/* <Service /> */}
       {/* <Features /> */}
       {/* <Appointment /> */}
       {/* <Facts /> */}
       {/* <Contact /> */}
-      <Leaders />
+      {/* <Leaders /> */}
     </>
   );
 };

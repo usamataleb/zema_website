@@ -37,9 +37,11 @@ const DirectorSample = () => {
       {showModal && (
         <>
           <div
-            className="modal fade show"
+            className="modal show"
             style={{ display: "block" }}
             tabIndex="-1"
+            role="dialog"
+            aria-modal="true"
           >
             <div className="modal-dialog modal-lg modal-dialog-centered">
               <div className="modal-content">

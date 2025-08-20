@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function RightPanel() {
   const [activeTab, setActiveTab] = useState("NOTICE");
 
-  const tabs = ["NOTICE", "HABARI", "TAARIFA KWA VYOMBO VYA HABARI"];
+  const tabs = ["NOTICE", "NEWS", "PRESS RELEASE"];
     const documentData = {
     NOTICE: {
       title: "SPECIAL NOTICE",
@@ -16,7 +16,7 @@ function RightPanel() {
       signedBy: "Executive Director",
       icon: "🏛️",
     },
-    HABARI: {
+    NEWS: {
       title: "ENVIRONMENT ANNOUNCEMENT",
       subtitle: "NEW ENVIRONMENT OPPORTUNITIES IN ZANZIBAR",
       content: [
@@ -27,8 +27,8 @@ function RightPanel() {
       signedBy: "Investment Director",
       icon: "📢",
     },
-    "TAARIFA KWA VYOMBO VYA HABARI": {
-      title: "TAARIFA KWA VYOMBO VYA HABARI",
+    "PRESS RELEASE": {
+      title: "PRESS RELEASE",
       subtitle: "ZIPA ACHIEVEMENTS IN INVESTMENT PROMOTION",
       content: [
         "Zanzibar Environmental Management Authority reports significant growth in foreign direct investment for the current fiscal year. The authority has successfully facilitated over 150 new investment projects worth $2.5 billion.",
