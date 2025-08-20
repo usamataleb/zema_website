@@ -10,12 +10,14 @@ import Contact from "../components/Contact";
 import Panels from "../components/Panels";
 import Intro from "../components/Intro";
 import NewsEvent from "../components/NewsEvent";
+import RightPanel from "../components/rightpanel";
 const Home = () => {
   return (
     <>
     <Panels />
-     <Director />
+     {/* <Director /> */}
       <div className="container">
+        <RightPanel />
         <Intro />
       </div>
      
@@ -25,7 +27,7 @@ const Home = () => {
       {/* <Appointment /> */}
       {/* <Facts /> */}
       {/* <Contact /> */}
-      <Leaders />
+      {/* <Leaders /> */}
     </>
   );
 };

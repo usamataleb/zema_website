@@ -9,12 +9,12 @@ const NewsEvent = () => {
           <div className="team-item rounded">
             <img className="img-fluid" src="img/team-1.jpg" alt="" />
             <div className="text-center p-4">
-              <h5>Full Name</h5>
-              <span>Designation</span>
+              <h5>Details</h5>
+            
             </div>
             <div className="team-text text-center bg-white p-4">
-              <h5>Full Name</h5>
-              <p>Designation</p>
+              <h5>Details</h5>
+            
               <div className="d-flex justify-content-center">
                 <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-twitter"></i></a>
                 <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-facebook-f"></i></a>
@@ -28,12 +28,12 @@ const NewsEvent = () => {
           <div className="team-item rounded">
             <img className="img-fluid" src="img/team-2.jpg" alt="" />
             <div className="text-center p-4">
-              <h5>Full Name</h5>
-              <span>Designation</span>
+              <h5>Details</h5>
+            
             </div>
             <div className="team-text text-center bg-white p-4">
-              <h5>Full Name</h5>
-              <p>Designation</p>
+              <h5>Details</h5>
+            
               <div className="d-flex justify-content-center">
                 <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-twitter"></i></a>
                 <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-facebook-f"></i></a>
@@ -47,12 +47,12 @@ const NewsEvent = () => {
           <div className="team-item rounded">
             <img className="img-fluid" src="img/team-3.jpg" alt="" />
             <div className="text-center p-4">
-              <h5>Full Name</h5>
-              <span>Designation</span>
+              <h5>Details</h5>
+
             </div>
             <div className="team-text text-center bg-white p-4">
-              <h5>Full Name</h5>
-              <p>Designation</p>
+              <h5>Details</h5>
+      
               <div className="d-flex justify-content-center">
                 <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-twitter"></i></a>
                 <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-facebook-f"></i></a>
@@ -66,12 +66,11 @@ const NewsEvent = () => {
           <div className="team-item rounded">
             <img className="img-fluid" src="img/team-4.jpg" alt="" />
             <div className="text-center p-4">
-              <h5>Full Name</h5>
-              <span>Designation</span>
+              <h5>Details</h5>
+           
             </div>
             <div className="team-text text-center bg-white p-4">
-              <h5>Full Name</h5>
-              <p>Designation</p>
+              <h5>Details</h5>
               <div className="d-flex justify-content-center">
                 <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-twitter"></i></a>
                 <a className="btn btn-square btn-light m-1" href=""><i className="fab fa-facebook-f"></i></a>

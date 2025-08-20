@@ -6,7 +6,7 @@ const Gallery = () => {
       <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center mx-auto mb-5" style={{ maxWidth: "600px" }}>
-          <h1 className="display-6">PICHA ZETU</h1>
+          <h1 className="display-6">Our Pictures</h1>
         </div>
 
         <div className="text-center mx-auto" style={{ maxWidth: "800px" }}></div>
