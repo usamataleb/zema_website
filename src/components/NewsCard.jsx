@@ -1,7 +1,4 @@
 const NewsCard  = (props) => {
-
-
-
   return (
 
     <div class="card h-100">

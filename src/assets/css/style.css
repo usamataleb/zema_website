@@ -96,7 +96,7 @@
   max-height: 100px;
 }
 
-.navbar .navbar-nav .nav-link {
+/* .navbar .navbar-nav .nav-link {
   margin-left: 25px;
   padding: 10px 0;
   color: #696e77;
@@ -107,7 +107,7 @@
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
   color: var(--primary);
-}
+} */
 
 .navbar .dropdown-toggle::after {
   border: none;
@@ -116,25 +116,6 @@
   font-weight: 900;
   vertical-align: middle;
   margin-left: 8px;
-}
-
-@media (max-width: 991.98px) {
-  .navbar .navbar-brand img {
-    max-height: 45px;
-  }
-
-  .navbar .navbar-nav {
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
-
-  .navbar .nav-item .dropdown-menu {
-    padding-left: 30px;
-  }
-
-  #navbarOutohide {
-    display: none;
-  }
 }
 
 @media (min-width: 992px) {
