@@ -9,7 +9,7 @@ import Facts from "../components/Facts";
 import Contact from "../components/Contact";
 import Panels from "../components/Panels";
 import Intro from "../components/Intro";
-import NewsEvent from "../components/NewsEvent";
+import NewsEvent from "../components/NewsEvents";
 import RightPanel from "../components/rightpanel";
 const Home = () => {
   return (
