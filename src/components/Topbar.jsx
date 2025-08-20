@@ -49,8 +49,8 @@ const Topbar = () => {
               Language
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
-              <li><a className="dropdown-item" href="#">Kiswahili</a></li>
               <li><a className="dropdown-item" href="#">English</a></li>
+              <li><a className="dropdown-item" href="#">Kiswahili</a></li>
             </ul>
           </div>
 

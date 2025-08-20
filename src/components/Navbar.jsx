@@ -1,31 +1,45 @@
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [showExtra, setShowExtra] = useState(false); // controls 2nd navbar
+  const [lastScroll, setLastScroll] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 100;
-      setScrolled(isScrolled);
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > lastScroll) {
+        // scrolling down
+        if (currentScroll > 100) {
+          setShowExtra(true);
+        }
+      } else {
+        // scrolling up
+        setShowExtra(false);
+      }
+
+      setLastScroll(currentScroll <= 0 ? 0 : currentScroll);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScroll]);
 
   return (
-    <>
     <nav className="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5">
-      <a href="index.html" className="navbar-brand d-flex align-items-center">
+      {/* Brand */}
+      <a href="/" className="navbar-brand d-flex align-items-center">
         <h1 className="m-0">
           <img
             className="img-fluid me-3"
             src="./img/logo/SMZ.png"
             alt="SMZ Logo"
-            style={{ width: "250px", height: "400px" }}
-          />{" "}
+            style={{ width: "150px", height: "200px" }}
+          />
         </h1>
       </a>
+
+      {/* Toggler */}
       <button
         type="button"
         className="navbar-toggler"
@@ -34,139 +48,84 @@ const Navbar = () => {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
+
+      {/* Main Navbar (English - always visible) */}
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
-          <a href="/" className="nav-item nav-link active">
-            Home
-          </a>
-          <a href="about" className="nav-item nav-link">
-            About Us
-          </a>
-          <a href="service" className="nav-item nav-link">
-            Our Services
-          </a>
-          <a href="gallery" className="nav-item nav-link">
-            Gallery
-          </a>
+          <a href="/" className="nav-item nav-link active">Home</a>
+          <a href="about" className="nav-item nav-link">About Us</a>
+          <a href="service" className="nav-item nav-link">Our Services</a>
+          <a href="gallery" className="nav-item nav-link">Gallery</a>
 
           <div className="nav-item dropdown">
-            <a
-              href="#"
-              className="nav-link dropdown-toggle"
-              data-bs-toggle="dropdown"
-            >
+            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
               News and Events
             </a>
-
             <div className="dropdown-menu bg-light border-0 m-0">
-              <a href="feature" className="dropdown-item">
-                Events
-              </a>
-              <a href="appointment" className="dropdown-item">
-                Press Release
-              </a>
+              <a href="feature" className="dropdown-item">Events</a>
+              <a href="appointment" className="dropdown-item">Press Release</a>
             </div>
           </div>
 
           <div className="nav-item dropdown">
-            <a
-              href="#"
-              className="nav-link dropdown-toggle"
-              data-bs-toggle="dropdown"
-            >
+            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
               History
             </a>
-
             <div className="dropdown-menu bg-light border-0 m-0">
-              <a href="feature.html" className="dropdown-item">
-                Reports
-              </a>
-              <a href="appointment.html" className="dropdown-item">
-                Policies and Regulations
-              </a>
+              <a href="feature.html" className="dropdown-item">Reports</a>
+              <a href="appointment.html" className="dropdown-item">Policies and Regulations</a>
             </div>
           </div>
 
-          <a href="contactus" className="nav-item nav-link">
-            Contact Us
-          </a>
+          <a href="contactus" className="nav-item nav-link">Contact Us</a>
         </div>
       </div>
 
-            {scrolled && (
-              <div
-                className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0 mt-2 fade-in"
-                id="navbarOutohide"
-              >
-                <a href="/" className="nav-item nav-link active">
-                  Nyumbani
-                </a>
-                <a href="about" className="nav-item nav-link">
-                  Kuhusu Zema
-                </a>
-                <a href="service" className="nav-item nav-link">
-                  Huduma Zetu
-                </a>
-                <a href="gallery" className="nav-item nav-link">
-                  Picha
-                </a>
+      {/* Second Navbar (Swahili - only on scroll down) */}
+      {showExtra && (
+        <div
+          className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0 mt-2 fade-in"
+          id="navbarOutohide"
+        >
+          <a href="/" className="nav-item nav-link active">Nyumbani</a>
+          <a href="about" className="nav-item nav-link">Kuhusu Zema</a>
+          <a href="service" className="nav-item nav-link">Huduma Zetu</a>
+          <a href="gallery" className="nav-item nav-link">Picha</a>
 
-                <div className="nav-item dropdown">
-                  <a
-                    href="#"
-                    className="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                  >
-                    Habari na Matukio
-                  </a>
-
-                  <div className="dropdown-menu bg-light border-0 m-0">
-                    <a href="feature" className="dropdown-item">
-                      Matukio
-                    </a>
-                    <a href="appointment" className="dropdown-item">
-                      Taarifa kwa Vyombo vya Habari
-                    </a>
-                  </div>
-                </div>
-
-                <div className="nav-item dropdown">
-                  <a
-                    href="#"
-                    className="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                  >
-                    Kumbukumbu
-                  </a>
-
-                  <div className="dropdown-menu bg-light border-0 m-0">
-                    <a href="feature.html" className="dropdown-item">
-                      Ripoti
-                    </a>
-                    <a href="appointment.html" className="dropdown-item">
-                      Kanuni na Taratibu
-                    </a>
-                    <a href="appointment.html" className="dropdown-item">
-                      Sera na
-                    </a>
-                  </div>
-                </div>
-
-                <a href="contactus" className="nav-item nav-link">
-                  Wasiliana Nasi
-                </a>
-              </div>
-            )}
-          {/* Right: Flag */}
-          <div className="d-none d-lg-flex justify-content-end ">
-            <img
-              src="./img/logo/znz-flag.gif"
-              alt="Zanzibar Flag"
-              style={{ height: "60px" }}
-            />
+          <div className="nav-item dropdown">
+            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              Habari na Matukio
+            </a>
+            <div className="dropdown-menu bg-light border-0 m-0">
+              <a href="feature" className="dropdown-item">Matukio</a>
+              <a href="appointment" className="dropdown-item">Taarifa kwa Vyombo</a>
+            </div>
           </div>
-      </nav>
-    </>
+
+          <div className="nav-item dropdown">
+            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              Kumbukumbu
+            </a>
+            <div className="dropdown-menu bg-light border-0 m-0">
+              <a href="feature.html" className="dropdown-item">Ripoti</a>
+              <a href="appointment.html" className="dropdown-item">Kanuni na Taratibu</a>
+              <a href="appointment.html" className="dropdown-item">Sera</a>
+            </div>
+          </div>
+
+          <a href="contactus" className="nav-item nav-link">Wasiliana Nasi</a>
+        </div>
+      )}
+
+      {/* Right: Flag */}
+      <div className="d-none d-lg-flex justify-content-end">
+        <img
+          src="./img/logo/znz-flag.gif"
+          alt="Zanzibar Flag"
+          style={{ height: "60px" }}
+        />
+      </div>
+    </nav>
   );
 };
 
