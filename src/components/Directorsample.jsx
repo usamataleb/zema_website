@@ -27,9 +27,9 @@ const DirectorSample = () => {
         </div>
 
         {/* Footer */}
-        <div className="card-body text-center bg-primary text-white">
+        <div className=  "card-body text-center bg-primary text-white">
           <h5 className="card-title mb-0">ZEMA</h5>
-          <small>Director General</small>
+          <small >Director General</small>
         </div>
       </div>
 
