@@ -47,7 +47,7 @@ function RightPanel() {
   return (
     <>
       {/* Right Panel */}
-        <div style={sliderStyles.documentPanel}>
+        <div style={sliderStyles.documentPanel} >
           {/* Tab Navigation */}
           <div className="d-flex" style={sliderStyles.tabNav}>
             {tabs.map((tab) => (
@@ -131,6 +131,7 @@ const sliderStyles = {
     borderRadius: "10px",
     boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
     overflow: "hidden",
+    marginTop: "50px",
   },
   leftPanel: {
     maxHeight: "200px",

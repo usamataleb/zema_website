@@ -2,7 +2,7 @@ import React from 'react'
 
 const Intro = () => {
   return (
-          <div className="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div className="col-lg-12 col-md-6 wow fadeInUp mt-5" data-wow-delay="0.1s">
               <div className="service-item rounded h-100 p-5">
               <div className="card-body">
                 <h5 className="card-title mb-0">What is ZEMA?</h5>
