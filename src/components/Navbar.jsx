@@ -16,17 +16,17 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5">
-        <div className="container-fluid d-flex justify-content-between align-items-center">
+        <div className="container-fluid d-flex justify-content-between align-items-center px-5 px-lg-5">
           {/* Left: Logo */}
           <a
             href="index.html"
-            className="navbar-brand d-flex align-items-center"
+            className="navbar-brand d-flex align-items-center pr-3"
           >
             <img
               className="img-fluid me-3 d-none d-lg-block"
               src="./img/logo/SMZ.png"
               alt="SMZ Logo"
-              style={{ maxHeight: "80px" }}
+              style={{ maxHeight: "120px" }}
             />
           </a>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
             <div className="d-flex d-lg-block align-items-center">
               <div>
                 <h2 className="text-dark fw-bold ">
-                  First Vice President Officer-Zanzibar{" "}
+                  Revolutionary Government of Zanzibar
                 </h2>
                 <h2 className="text-dark fw-bold mb-0 mb-2">
                   Zanzibar Environmental Management Authority (ZEMA)
@@ -118,7 +118,7 @@ const Navbar = () => {
               <div className="collapse navbar-collapse " id="navbarCollapse">
                 <div className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
                   <a href="/" className="nav-item nav-link active">
-                   Home
+                    Home
                   </a>
                   <a href="about" className="nav-item nav-link">
                     About Us
@@ -184,7 +184,7 @@ const Navbar = () => {
             <img
               src="./img/logo/znz-flag.gif"
               alt="Zanzibar Flag"
-              style={{ height: "60px" }}
+              style={{ height: "95px" }}
             />
           </div>
         </div>

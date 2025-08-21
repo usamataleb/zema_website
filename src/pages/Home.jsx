@@ -18,7 +18,6 @@ const Home = () => {
      {/* <Director /> */}
       <div className="container">
         <RightPanel />
-        <Intro />
       </div>
      
       <NewsEvent />
