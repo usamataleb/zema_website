@@ -11,6 +11,9 @@ import Panels from "../components/Panels";
 import Intro from "../components/Intro";
 import NewsEvent from "../components/NewsEvents";
 import RightPanel from "../components/rightpanel";
+import OurPartner from "../components/OurPartners";
+
+
 const Home = () => {
   return (
     <>
@@ -21,6 +24,7 @@ const Home = () => {
       </div>
      
       <NewsEvent />
+      <OurPartner />
       {/* <Service /> */}
       {/* <Features /> */}
       {/* <Appointment /> */}

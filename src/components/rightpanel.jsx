@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function RightPanel() {
   const [activeTab, setActiveTab] = useState("NOTICE");
 
-  const tabs = ["NOTICE", "NEWS", "PRESS RELEASE"];
+  const tabs = ["NOTICE", "ANNOUNCEMENT", "PRESS RELEASE","REGULATION & GUIDANCE", "POLICIES & LAWS"];
     const documentData = {
     NOTICE: {
       title: "SPECIAL NOTICE",
@@ -16,7 +16,7 @@ function RightPanel() {
       signedBy: "Executive Director",
       icon: "🏛️",
     },
-    NEWS: {
+   "ANNOUNCEMENT": {
       title: "ENVIRONMENT ANNOUNCEMENT",
       subtitle: "NEW ENVIRONMENT OPPORTUNITIES IN ZANZIBAR",
       content: [
@@ -30,6 +30,28 @@ function RightPanel() {
     "PRESS RELEASE": {
       title: "PRESS RELEASE",
       subtitle: "ZIPA ACHIEVEMENTS IN INVESTMENT PROMOTION",
+      content: [
+        "Zanzibar Environmental Management Authority reports significant growth in foreign direct investment for the current fiscal year. The authority has successfully facilitated over 150 new investment projects worth $2.5 billion.",
+        "This achievement demonstrates Zanzibar's growing reputation as an attractive investment destination in East Africa. The government continues to implement investor-friendly policies and improve the ease of doing business.",
+        "We remain committed to supporting investors and promoting sustainable economic development in Zanzibar.",
+      ],
+      signedBy: "Communications Manager",
+      icon: "📰",
+    },
+    "REGULATION & GUIDANCE": {
+      title: "REGULATION & GUIDANCE",
+      subtitle: "NEW REGULATIONS AND GUIDELINES IN ZANZIBAR",
+      content: [
+        "The Zanzibar Environmental Management Authority announces new regulations and guidelines to enhance environmental protection and sustainable development.",
+        "These regulations aim to streamline the investment process while ensuring compliance with environmental standards.",
+        "For detailed information and guidance, please refer to the official ZEMA website or contact our support team.",
+      ],
+      signedBy: "Investment Director",
+      icon: "📢",
+    },
+    "POLICIES & LAWS": {
+      title: "POLICIES & LAWS",
+      subtitle: "NEW POLICIES AND LAWS IN ZANZIBAR",
       content: [
         "Zanzibar Environmental Management Authority reports significant growth in foreign direct investment for the current fiscal year. The authority has successfully facilitated over 150 new investment projects worth $2.5 billion.",
         "This achievement demonstrates Zanzibar's growing reputation as an attractive investment destination in East Africa. The government continues to implement investor-friendly policies and improve the ease of doing business.",

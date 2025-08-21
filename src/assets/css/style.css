@@ -615,3 +615,56 @@
 .director-card:hover .card-overlay {
   opacity: 1;
 }
+
+
+
+
+
+
+
+/* OurPartners.css */
+
+/* Heading style */
+.partners-heading {
+  background-color: #f0f0f0; /* grey background */
+  display: inline-block;      /* ili underline iwe kwenye heading tu */
+  padding: 10px 20px;
+  border-bottom: 4px solid green; /* underline green color */
+  margin-bottom: 20px;
+}
+
+/* Logos container style
+.partners-logos {
+  background-color: #fff176; /* yellow background */
+  padding: 20px;
+  border-radius: 10px;
+    scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* smooth kwa simu */
+/* } */ */
+.our-partners-container {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.partners-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.partners-slider {
+  overflow: hidden; /* ili ku-hide logos zinapo beyond container */
+  background-color: #fff176;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.partners-track {
+  display: flex;
+  width: calc(200%); /* kwa duplicate logos */
+  animation: scroll 20s linear infinite; /* automatic scrolling */
+}
+
+.partner-item {
+  flex: 0 0 auto; /* hakikisha size stable */
+ 

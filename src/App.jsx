@@ -10,6 +10,7 @@ import Gallery from "./pages/Gallery";
 import History from "./pages/History";
 import Contactus from "./pages/Contactus";
 import NewsCard from "./components/NewsCard.jsx";
+import OurPartner from "./components/OurPartners.jsx";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
               <Route path="/history" element={<History />} />
               <Route path="/contactus" element={<Contactus />} />
               <Route path="/NewsCard" element={<NewsCard/>} />
+              <Route path="/OurPartner" element={<OurPartner />} />
+
               {/* <Route path="/habari" element={<Habari />} />/ */}
 
               {/* <Route path="/organiztionstructure" element={<OrganizationStructure />}
