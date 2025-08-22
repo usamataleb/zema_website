@@ -52,67 +52,82 @@ const Navbar = () => {
             </div>
 
             {scrolled ? (
-              <div
-                className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0 mt-2 fade-in"
-                id="navbarOutohide"
-              >
-                <a href="/" className="nav-item nav-link active">
-                  Home
-                </a>
-                <a href="about" className="nav-item nav-link">
-                  About Us
-                </a>
-                <a href="service" className="nav-item nav-link">
-                  Our Services
-                </a>
-                <a href="gallery" className="nav-item nav-link">
-                  Gallery
-                </a>
-
-                <div className="nav-item dropdown">
-                  <a
-                    href="#"
-                    className="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                  >
-                    News and Events
+              <div className="collapse navbar-collapse " id="navbarCollapse">
+                <div className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
+                  <a href="/" className="nav-item nav-link active">
+                    Home
+                  </a>
+                  <a href="about" className="nav-item nav-link">
+                    About Us
+                  </a>
+                  <a href="service" className="nav-item nav-link">
+                    Our Services
                   </a>
 
-                  <div className="dropdown-menu bg-light border-0 m-0">
-                    <a href="feature" className="dropdown-item">
-                      Events
+                  <div className="nav-item dropdown">
+                    <a
+                      href="#"
+                      className="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                    >
+                      Archives
                     </a>
-                    <a href="appointment" className="dropdown-item">
-                      Press Releases
-                    </a>
-                  </div>
-                </div>
 
-                <div className="nav-item dropdown">
-                  <a
-                    href="#"
-                    className="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                  >
-                    History
+                    <div className="dropdown-menu bg-light border-0 m-0">
+                      <a href="gallery" className="dropdown-item">
+                        Gallery
+                      </a>
+                      <a href="appointment" className="dropdown-item">
+                        Press Releases
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="nav-item dropdown">
+                    <a
+                      href="#"
+                      className="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                    >
+                      News and Events
+                    </a>
+
+                    <div className="dropdown-menu bg-light border-0 m-0">
+                      <a href="feature" className="dropdown-item">
+                        Events
+                      </a>
+                      <a href="appointment" className="dropdown-item">
+                        Press Releases
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="nav-item dropdown">
+                    <a
+                      href="#"
+                      className="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                    >
+                      History
+                    </a>
+
+                    <div className="dropdown-menu bg-light border-0 m-0">
+                      <a href="feature.html" className="dropdown-item">
+                        Reports
+                      </a>
+                      <a href="appointment.html" className="dropdown-item">
+                        Rules and Regulations
+                      </a>
+                      <a href="appointment.html" className="dropdown-item">
+                        Policies
+                      </a>
+                    </div>
+                  </div>
+
+                  <a href="contactus" className="nav-item nav-link">
+                    Contact Us
                   </a>
-
-                  <div className="dropdown-menu bg-light border-0 m-0">
-                    <a href="feature.html" className="dropdown-item">
-                      Reports
-                    </a>
-                    <a href="appointment.html" className="dropdown-item">
-                      Rules and Regulations
-                    </a>
-                    <a href="appointment.html" className="dropdown-item">
-                      Policies
-                    </a>
-                  </div>
                 </div>
-
-                <a href="contactus" className="nav-item nav-link">
-                  Contact Us
-                </a>
               </div>
             ) : (
               <div className="collapse navbar-collapse " id="navbarCollapse">
@@ -126,9 +141,24 @@ const Navbar = () => {
                   <a href="service" className="nav-item nav-link">
                     Our Services
                   </a>
-                  <a href="gallery" className="nav-item nav-link">
-                    Gallery
-                  </a>
+                  <div className="nav-item dropdown">
+                    <a
+                      href="#"
+                      className="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                    >
+                      Archives
+                    </a>
+
+                    <div className="dropdown-menu bg-light border-0 m-0">
+                      <a href="gallery" className="dropdown-item">
+                        Gallery
+                      </a>
+                      <a href="appointment" className="dropdown-item">
+                        Press Releases
+                      </a>
+                    </div>
+                  </div>
 
                   <div className="nav-item dropdown">
                     <a
