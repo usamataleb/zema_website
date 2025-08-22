@@ -617,54 +617,139 @@
 }
 
 
-
-
-
-
-
-/* OurPartners.css */
-
-/* Heading style */
-.partners-heading {
-  background-color: #f0f0f0; /* grey background */
-  display: inline-block;      /* ili underline iwe kwenye heading tu */
-  padding: 10px 20px;
-  border-bottom: 4px solid green; /* underline green color */
-  margin-bottom: 20px;
+/* Our Partner Section */
+.partners-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-/* Logos container style
-.partners-logos {
-  background-color: #fff176; /* yellow background */
-  padding: 20px;
-  border-radius: 10px;
-    scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* smooth kwa simu */
-/* } */ */
-.our-partners-container {
-  text-align: center;
-  margin: 40px auto;
+.partners-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 0.5rem;
 }
 
-.partners-heading {
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-weight: bold;
+.partners-subtitle {
+  color: #6c757d;
+  margin-bottom: 3rem;
 }
 
-.partners-slider {
-  overflow: hidden; /* ili ku-hide logos zinapo beyond container */
-  background-color: #fff176;
-  padding: 20px 0;
-  border-radius: 10px;
+.partners-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.partners-track {
+.carousel-container {
+  overflow: hidden;
+  margin: 0 3rem;
+}
+
+.carousel-track {
   display: flex;
-  width: calc(200%); /* kwa duplicate logos */
-  animation: scroll 20s linear infinite; /* automatic scrolling */
+  gap: 30px;
+  will-change: transform;
 }
 
-.partner-item {
-  flex: 0 0 auto; /* hakikisha size stable */
- 
+.carousel-slide {
+  flex: 0 0 auto;
+  width: 234px;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #dee2e6;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+  background: #4A90E2;
+  color: white;
+  border-color: #4A90E2;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .carousel-container {
+    margin: 0 2rem;
+  }
+  
+  .partners-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-section {
+    padding: 3rem 0;
+  }
+  
+  .carousel-container {
+    margin: 0 1rem;
+  }
+  
+  .carousel-controls {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .partners-title {
+    font-size: 1.75rem;
+  }
+  
+  .carousel-track {
+    gap: 20px;
+  }
+  
+  .carousel-slide {
+    width: 200px;
+  }
+  
+  .partner-logo {
+    height: 120px;
+    padding: 1rem;
+  }
+}
