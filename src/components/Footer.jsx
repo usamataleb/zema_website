@@ -1,8 +1,7 @@
 const Footer = () => {
   return (
     <div
-      className="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn"
-      data-wow-delay="0.1s"
+      className="container-fluid footer mt-5 pt-5 wow fadeIn  footer "      data-wow-delay="0.1s"
     >
       <div className="container py-5">
         <div className="row g-5">
@@ -89,8 +88,8 @@ const Footer = () => {
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
               &copy; {new Date().getFullYear()} <a href="#" className="text-decoration-none">ZEMA</a>, Haki zote zimehifadhiwa.
             </div>
-            <div className="col-md-6 text-center text-md-end">
-              <a className="text-decoration-none">Imetengenezwa na Kitengo cha Tehama</a>
+            <div className="col-md-6 text-center text-md-end ">
+              <a className="text-decoration-none " >Imetengenezwa na Kitengo cha Tehama</a>
             </div>
           </div>
         </div>
