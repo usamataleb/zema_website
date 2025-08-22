@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-  --primary: #2fa33f;
+  --primary:  rgb(37, 124, 19);
   --secondary: #0288d1;
   --light: #f6f7fc;
   /* --dark: #15233C; */
@@ -86,6 +86,7 @@
   background: var(--primary);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
+  background-image: url(../img/overlay.webp);
 }
 .navbar.sticky-top {
   top: -100px;
@@ -416,6 +417,10 @@
 /*** Footer ***/
 .footer {
   color: #a7a8b4;
+  background-color: var(--primary);
+  background-image: url(../img/overlay.webp);
+  background-size: cover;
+  color: white;
 }
 
 .footer .btn.btn-link {
@@ -423,7 +428,7 @@
   margin-bottom: 5px;
   padding: 0;
   text-align: left;
-  color: #a7a8b4;
+  color: white;
   font-weight: normal;
   text-transform: capitalize;
   transition: 0.3s;
@@ -434,7 +439,7 @@
   content: "\f105";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #a7a8b4;
+  color: white;
   margin-right: 10px;
 }
 
@@ -445,8 +450,8 @@
 }
 
 .footer .btn.btn-square {
-  color: #a7a8b4;
-  border: 1px solid#A7A8B4;
+  color: white;
+  border: 1px solid white;
 }
 
 .footer .btn.btn-square:hover {
@@ -465,10 +470,10 @@
 }
 
 .footer .copyright a:hover {
-  color: #ffffff;
+  color: white;
 }
 .footer .social a {
-  color: #a7a8b4;
+  color: white;
   margin-right: 15px;
   font-size: 20px;
 }

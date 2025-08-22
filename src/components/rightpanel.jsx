@@ -53,9 +53,9 @@ function RightPanel() {
       title: "POLICIES & LAWS",
       subtitle: "NEW POLICIES AND LAWS IN ZANZIBAR",
       content: [
-        "Zanzibar Environmental Management Authority reports significant growth in foreign direct investment for the current fiscal year. The authority has successfully facilitated over 150 new investment projects worth $2.5 billion.",
-        "This achievement demonstrates Zanzibar's growing reputation as an attractive investment destination in East Africa. The government continues to implement investor-friendly policies and improve the ease of doing business.",
-        "We remain committed to supporting investors and promoting sustainable economic development in Zanzibar.",
+       " The Zanzibar Environmental Management Act of 2015 serves as the primary legal framework for environmental governance in Zanzibar. It establishes the Zanzibar Environmental Management Authority",
+       " (ZEMA) as the central body responsible for coordinating and enforcing environmental management across the islands. Under this Act, ZEMA is mandated to oversee Environmental Impact Assessments (EIAs), monitor environmental activities, issue relevant permits, and take enforcement actions against individuals or entities that violate environmental laws.",
+       " The Act is guided by fundamental principles, including the precautionary principle, the polluter pays principle, and the obligation to ensure a clean, safe, and healthy environment for present and future generations.",
       ],
       signedBy: "Communications Manager",
       icon: "📰",
