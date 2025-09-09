@@ -29,12 +29,12 @@ const NewsData = [
   },
 ];
 
-const NewsEvents = () => {
+const NewsEvents = (props) => {
   return (
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center mx-auto" style={{ maxWidth: "500px" }}>
-          <h1 className="display-6 mb-5">News & Events</h1>
+          <h1 className="display-6 mb-5">{props.title || "News & Events"}</h1>
         </div>
         <div className="row g-4">
           {NewsData.map((news, index) => (

@@ -2,39 +2,39 @@ import React from "react";
 
 const zemaSections = [
   {
-    title: "Sehemu ya Utawala na Fedha",
+    title: "Administrative & Financial Services",
     description:
-      "Inahusika na huduma za kiutawala, utumishi na fedha, ikiwa ni pamoja na maslahi ya watumishi, ajira, kumbukumbu, mafunzo, matumizi, ununuzi, jengo la Ofisi, UKIMWI, jinsia, ulemavu, mapato na fedha. Ina Kitengo cha Utawala na Kitengo cha Fedha.",
+      "It deals with administrative, personnel, and financial services, including employee welfare, employment, records, training, expenditures, procurement, office building, HIV/AIDS, gender, disability, revenue, and finances. It has an Administration Unit and a Finance Unit.",
     icon: "img/icon/fnc1.png",
   },
   {
-    title: "Sehemu ya Mipango na Ufuatiliaji wa Mazingira",
+    title: "Environmental Planning and Monitoring Section",
     description:
-      "Inahusika na utekelezaji wa sheria na miongozo ya mipango na ufuatiliaji wa mazingira, kuandaa mipango ya maendeleo ya ZEMA, kuandaa miongozo, kufuatilia bayoanuwai, ikolojia ya nchi kavu, baharini, ukanda wa pwani, na taka. Ina Kitengo cha Mipango na Kitengo cha Ufuatiliaji.",
+      "It is responsible for the implementation of environmental planning laws and guidelines, preparation of ZEMA’s development plans, formulation of guidelines, monitoring of biodiversity, terrestrial ecology, marine and coastal zones, and waste. It has a Planning Unit and a Monitoring Unit.",
     icon: "img/icon/env3.png",
   },
   {
-    title: "Sehemu ya Uzingatiaji na Utekelezaji wa Sheria",
+    title: "Compliance and Legal Implementation Section",
     description:
-      "Inahakikisha uzingatiaji wa sheria, kanuni na miongozo ya mazingira, kutoa ushauri wa kisheria, kuratibu operesheni za kimazingira, na kusimamia mashtaka. Ina Kitengo cha Operesheni za Kimazingira na Kitengo cha Sheria.",
+      "It ensures compliance with environmental laws, regulations, and guidelines, provides legal advice, coordinates environmental operations, and manages prosecutions. It has an Environmental Operations Unit and a Legal Unit.",
     icon: "img/icon/law.avif",
   },
   {
-    title: "Sehemu ya Tathmini za Kimazingira",
+    title: "The Environmental Assessment Section",
     description:
-      "Inaratibu tathmini za athari za kimazingira, kusajili wataalam, kukusanya taarifa, kutoa vyeti na kushiriki ukaguzi wa miradi. Ina Kitengo cha Tathmini za Athari na Kitengo cha Ukaguzi wa Kimazingira.",
+      "It coordinates environmental impact assessments, registers experts, collects information, issues certificates, and participates in project inspections. It has an Impact Assessment Unit and an Environmental Audit Unit.",
     icon: "img/icon/env1.avif",
   },
   {
-    title: "Sehemu ya Habari za Mazingira na Mawasiliano",
+    title: "Environmental Information and Communication Section",
     description:
-      "Inatoa taarifa kwa jamii, inasimamia malalamiko, inashughulikia intaneti, tovuti ya ZEMA, na taarifa za kijografia kwa mfumo wa IT na GIS. Ina Kitengo cha Habari na Jamii na Kitengo cha IT & GIS.",
+      "It provides information to the public, manages complaints, handles the internet, ZEMA’s website, and geographic information through IT and GIS systems. It has a Public Information and Community Unit and an IT & GIS Unit.",
     icon: "img/icon/comm.png",
   },
   {
-    title: "Ofisi ya Mamlaka Pemba",
+    title: "ZEMA Pemba Office Services",
     description:
-      "Inaratibu utekelezaji wa majukumu yote ya ZEMA kwa upande wa Pemba ikiwa ni pamoja na usimamizi wa mazingira.",
+      "It coordinates the implementation of all ZEMA’s functions in Pemba, including environmental management.",
     icon: "img/icon/office.png",
   },
 ];
@@ -44,7 +44,7 @@ const Service = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center mx-auto" style={{ maxWidth: "600px" }}>
-          <h1 className="display-6 mb-5">SEHEMU NA VITENGO VYA ZEMA</h1>
+          <h1 className="display-6 mb-5">Our Services</h1>
         </div>
         <div className="row g-4 justify-content-center">
           {zemaSections.map((section, index) => (

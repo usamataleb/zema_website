@@ -53,12 +53,12 @@ const PartnersCarousel = () => {
   }, []);
 
   const partners = [
-    { id: 1, logo: "https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/slider-logo1.png", name: "Partner 1" },
-    { id: 2, logo: "https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/slider-logo2.png", name: "Partner 2" },
-    { id: 3, logo: "https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/slider-logo3.png", name: "Partner 3" },
-    { id: 4, logo: "https://via.placeholder.com/234x100/4A90E2/FFFFFF?text=Partner+4", name: "Partner 4" },
-    { id: 5, logo: "https://via.placeholder.com/234x100/50C878/FFFFFF?text=Partner+5", name: "Partner 5" },
-    { id: 6, logo: "https://via.placeholder.com/234x100/F6546A/FFFFFF?text=Partner+6", name: "Partner 6" }
+    { id: 1, logo: "./img/partners/TRA.jpg", name: "TRA" },
+    { id: 2, logo: "./img/partners/ZRA.png", name: "ZRA" },
+    { id: 3, logo: "./img/partners/IMMIGRATION.png", name: "IMMIGRATION" },
+    { id: 4, logo: "./img/partners/TRA.png", name: "TRA" },
+    { id: 5, logo: "./img/partners/TRA.png", name: "TRA" },
+    { id: 6, logo: "./img/partners/TRA.png", name: "TRA" }
   ];
 
   return (
@@ -66,7 +66,6 @@ const PartnersCarousel = () => {
       <div className="container">
         <div className="text-center mx-auto" style={{ maxWidth: "500px" }}>
           <h2 className="partners-title">Our Partners</h2>
-          <p className="partners-subtitle">We collaborate with industry leaders</p>
         </div>
         
         <div className="partners-carousel">

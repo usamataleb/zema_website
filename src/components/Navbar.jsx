@@ -24,9 +24,9 @@ const Navbar = () => {
           >
             <img
               className="img-fluid me-3 d-none d-lg-block"
-              src="./img/logo/SMZ.png"
+              src="./img/logo/SMZ2.png"
               alt="SMZ Logo"
-              style={{ maxHeight: "120px" }}
+              style={{ maxHeight: "170px" }}
             />
           </a>
 
@@ -126,9 +126,9 @@ const Navbar = () => {
                   <a href="service" className="nav-item nav-link">
                     Our Services
                   </a>
-                  <a href="gallery" className="nav-item nav-link">
+                  {/* <a href="gallery" className="nav-item nav-link">
                     Gallery
-                  </a>
+                  </a> */}
 
                   <div className="nav-item dropdown">
                     <a
@@ -136,15 +136,19 @@ const Navbar = () => {
                       className="nav-link dropdown-toggle"
                       data-bs-toggle="dropdown"
                     >
-                      News and Events
+                      Archive
                     </a>
 
                     <div className="dropdown-menu bg-light border-0 m-0">
-                      <a href="feature" className="dropdown-item">
+                      <a href="News" className="dropdown-item">
+                        News
+                        
+                      </a>
+                      <a href="Events" className="dropdown-item">
                         Events
                       </a>
-                      <a href="appointment" className="dropdown-item">
-                        Press Releases
+                      <a href="gallery" className="dropdown-item">
+                        Gallery
                       </a>
                     </div>
                   </div>
@@ -155,17 +159,14 @@ const Navbar = () => {
                       className="nav-link dropdown-toggle"
                       data-bs-toggle="dropdown"
                     >
-                      History
+                      Publication
                     </a>
 
                     <div className="dropdown-menu bg-light border-0 m-0">
-                      <a href="feature.html" className="dropdown-item">
-                        Reports
-                      </a>
-                      <a href="appointment.html" className="dropdown-item">
+                      <a href="Rules and Regulations" className="dropdown-item">
                         Rules and Regulations
                       </a>
-                      <a href="appointment.html" className="dropdown-item">
+                      <a href="Policies" className="dropdown-item">
                         Policies
                       </a>
                     </div>
