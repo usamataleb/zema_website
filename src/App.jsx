@@ -17,6 +17,7 @@ import EnvironmentalAudit from "./pages/InvironmentalAudit.jsx";
 import EnvironmntalReport from "./pages/EnvironmentalReport.jsx";
 import EnvironmentalDirect from "./pages/EnvironmentalDirect.jsx";
 import PreAudit from "./pages/PreAudit.jsx";
+import NewsDetails from "./pages/NewsDetails.jsx";
 
 function App() {
   return (
@@ -58,6 +59,8 @@ function App() {
                 element={<EnvironmentalDirect />}
               />
               <Route path="/PreAudit" element={<PreAudit />} />
+              
+              <Route path="/newsdetails/:id" element={<NewsDetails />} />
             </Routes>
           </main>
           <Footer />

@@ -99,17 +99,26 @@ const Navbar = () => {
                       </a>
                       <ul className="dropdown-menu">
                         <li>
-                          <a href="/EnvironmetalImpact" className="dropdown-item">
+                          <a
+                            href="/EnvironmetalImpact"
+                            className="dropdown-item"
+                          >
                             Environmental Impact Assessment (EIA)
                           </a>
                         </li>
                         <li>
-                          <a href="/EnvironmentalAudit" className="dropdown-item">
+                          <a
+                            href="/EnvironmentalAudit"
+                            className="dropdown-item"
+                          >
                             Environmental Audit (EA)
                           </a>
                         </li>
                         <li>
-                          <a href="/EnvironmentalReport" className="dropdown-item">
+                          <a
+                            href="/EnvironmentalReport"
+                            className="dropdown-item"
+                          >
                             Environmental Report (ER)
                           </a>
                         </li>
@@ -119,7 +128,10 @@ const Navbar = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="/EnvironmentalDirect" className="dropdown-item">
+                          <a
+                            href="/EnvironmentalDirect"
+                            className="dropdown-item"
+                          >
                             Environment Direct Clearance
                           </a>
                         </li>
@@ -140,24 +152,9 @@ const Navbar = () => {
                   Gallery
                 </a>
 
-                <div className="nav-item dropdown">
-                  <a
-                    href="#"
-                    className="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                  >
-                    News and Events
-                  </a>
-
-                  <div className="dropdown-menu bg-ligdropdown-itemht border-0 m-0">
-                    <a href="/feature" className="dropdown-item">
-                      Events
-                    </a>
-                    <a href="/appointment" className="dropdown-item">
-                      Press Releases
-                    </a>
-                  </div>
-                </div>
+                <a href="/news" className="nav-item nav-link">
+                  News And Events
+                </a>
 
                 <div className="nav-item dropdown">
                   <a
