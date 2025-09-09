@@ -5,9 +5,9 @@ const Footer = () => {
     >
       <div className="container py-5">
         <div className="row g-5">
-          {/* Wasiliana nasi */}
+          {/* contact us */}
           <div className="col-lg-3 col-md-6">
-            <h5 className="text-light mb-4">Wasiliana nasi</h5>
+            <h5 className="text-light mb-4">contact us</h5>
             <p>
               <i className="fa fa-map-marker-alt me-3"></i>P.O Box 1234, Zanzibar
             </p>
@@ -86,10 +86,10 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; {new Date().getFullYear()} <a href="#" className="text-decoration-none">ZEMA</a>, Haki zote zimehifadhiwa.
+              &copy; {new Date().getFullYear()} <a>ZEMA</a>, Haki zote zimehifadhiwa.
             </div>
             <div className="col-md-6 text-center text-md-end ">
-              <a className="text-decoration-none " >Imetengenezwa na Kitengo cha Tehama</a>
+              <a>Imetengenezwa na Kitengo cha Tehama</a>
             </div>
           </div>
         </div>
