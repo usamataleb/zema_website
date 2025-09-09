@@ -22,6 +22,7 @@ const Navbar = () => {
         style={{
           transition: "all 0.3s ease-in-out",
           boxShadow: scrolled ? "0 2px 10px rgba(0,0,0,0.1)" : "none",
+          background: "linear-gradient(135deg, #1a6a3d 0%, #2c8c5a 100%)",
         }}
       >
         {" "}
