@@ -86,7 +86,7 @@
   background: var(--primary);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
-  background-image: url(../img/overlay.webp);
+  /* background-image: url(../img/overlay.webp); */
 }
 .navbar.sticky-top {
   top: -100px;

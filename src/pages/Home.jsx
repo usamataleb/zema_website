@@ -22,6 +22,8 @@ const Home = () => {
       <div className="container">
         <RightPanel />
       </div>
+
+        <Slider/>
      
       <NewsEvent />
       <OurPartner />

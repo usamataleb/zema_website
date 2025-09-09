@@ -63,25 +63,10 @@ const Navbar = () => {
                   <a href="service" className="nav-item nav-link">
                     Our Services
                   </a>
-
-                  <div className="nav-item dropdown">
-                    <a
-                      href="#"
-                      className="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                    >
-                      Archives
-                    </a>
-
-                    <div className="dropdown-menu bg-light border-0 m-0">
-                      <a href="gallery" className="dropdown-item">
-                        Gallery
-                      </a>
-                      <a href="appointment" className="dropdown-item">
-                        Press Releases
-                      </a>
-                    </div>
-                  </div>
+                  <a href="gallery" className="nav-item nav-link">
+                    Gallery
+                  </a>
+                  
 
                   <div className="nav-item dropdown">
                     <a
@@ -141,24 +126,9 @@ const Navbar = () => {
                   <a href="service" className="nav-item nav-link">
                     Our Services
                   </a>
-                  <div className="nav-item dropdown">
-                    <a
-                      href="#"
-                      className="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                    >
-                      Archives
-                    </a>
-
-                    <div className="dropdown-menu bg-light border-0 m-0">
-                      <a href="gallery" className="dropdown-item">
-                        Gallery
-                      </a>
-                      <a href="appointment" className="dropdown-item">
-                        Press Releases
-                      </a>
-                    </div>
-                  </div>
+                  <a href="gallery" className="nav-item nav-link">
+                    Gallery
+                  </a>
 
                   <div className="nav-item dropdown">
                     <a
