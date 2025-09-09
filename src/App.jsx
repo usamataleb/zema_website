@@ -4,18 +4,19 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/Footer";
-import Service from "./pages/Service";
+import OrganizationStructure from "./pages/OrganizationStructure.jsx";
 import News from "./pages/News";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
-import History from "./pages/History";
-import Contactus from "./pages/Contactus";
 import NewsCard from "./components/NewsCard.jsx";
-import OurPartner from "./components/OurPartners.jsx";
 import RulesAndRegulations from "./pages/Rules and Regulations.jsx";
 import Policies from "./pages/Polices.jsx";
-
-// import Features from "./components/Features";
+import Expert from "./pages/Expert.jsx";
+import EnvironmentalImpact from "./pages/EnvironmentalImpact.jsx";
+import EnvironmentalAudit from "./pages/InvironmentalAudit.jsx";
+import EnvironmntalReport from "./pages/EnvironmentalReport.jsx";
+import EnvironmentalDirect from "./pages/EnvironmentalDirect.jsx";
+import PreAudit from "./pages/PreAudit.jsx";
 
 function App() {
   return (
@@ -30,26 +31,33 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/news" element={<News />} />
               <Route path="/events" element={<Events />} />
-              <Route path="/service" element={<Service />} />
+              <Route path="/expert" element={<Expert />} />
               <Route path="/gallery" element={<Gallery />} />
-              <Route path="/history" element={<History />} />
-              <Route path="/contactus" element={<Contactus />} />
-              <Route path="/NewsCard" element={<NewsCard/>} />
-              <Route path="/OurPartner" element={<OurPartner />} />
-              <Route path="/Rules and Regulations" element={<RulesAndRegulations />} />
-              <Route path="/Policies" element={<Policies />} />
+              <Route path="/organization" element={<OrganizationStructure />} />
+              <Route path="/NewsCard" element={<NewsCard />} />
+              <Route
+                path="/RulesAndRegulations"
+                element={<RulesAndRegulations />}
+              />
 
-              {/* <Route path="/habari" element={<Habari />} />/ */}
-
-              {/* <Route path="/organiztionstructure" element={<OrganizationStructure />}
-               <Route path="/gallery"  element={<Gallery />} />
-              <Route path="/packages"  element={<Packages />} />
-              <Route path="/package/:id"  element={<Package />} />
-              <Route path="/contact"  element={<Contact />} />
-              <Route path="/tanzania"  element={<Tanzania />} />
-              <Route path="/zanzibar"  element={<Zanzibar />} />
-              <Route path="/zanexcursion"  element={<ZanExcursion />} />
-              <Route path="/tansafari"  element={<TanSafari />} /> */}
+              <Route path="/policies" element={<Policies />} />
+              <Route
+                path="/EnvironmetalImpact"
+                element={<EnvironmentalImpact />}
+              />
+              <Route
+                path="/EnvironmentalAudit"
+                element={<EnvironmentalAudit />}
+              />
+              <Route
+                path="/EnvironmentalReport"
+                element={<EnvironmntalReport />}
+              />
+              <Route
+                path="/EnvironmentalDirect"
+                element={<EnvironmentalDirect />}
+              />
+              <Route path="/PreAudit" element={<PreAudit />} />
             </Routes>
           </main>
           <Footer />

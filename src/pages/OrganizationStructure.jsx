@@ -39,12 +39,14 @@ const zemaSections = [
   },
 ];
 
-const Service = () => {
+const OrganizationStructure = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center mx-auto" style={{ maxWidth: "600px" }}>
-          <h1 className="display-6 mb-5">Our Services</h1>
+          <h2 className="fw-bold mb-4 text-center text-success">
+            ORGANIZATION STRUCTURE{" "}
+          </h2>{" "}
         </div>
         <div className="row g-4 justify-content-center">
           {zemaSections.map((section, index) => (
@@ -74,4 +76,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default OrganizationStructure;

@@ -6,7 +6,9 @@ const AboutZEMA = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center mx-auto mb-5" style={{ maxWidth: "600px" }}>
-          <h1 className="display-6">About Zema</h1>
+                    <h2 className="fw-bold mb-4 text-center text-success">
+            About Zema{" "}
+          </h2>{" "}
         </div>
         <div className="row g-4">
           <Intro />

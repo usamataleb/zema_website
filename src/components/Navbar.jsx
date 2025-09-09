@@ -77,10 +77,66 @@ const Navbar = () => {
                 <a href="about" className="nav-item nav-link">
                   About Us
                 </a>
-                <a href="service" className="nav-item nav-link">
-                  Our Services
-                </a>
-                <a href="gallery" className="nav-item nav-link">
+
+                <div className="nav-item dropdown">
+                  <a
+                    href="service"
+                    className="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                  >
+                    Our Services
+                  </a>
+
+                  <div className="dropdown-menu bg-light border-0 m-0">
+                    <div className="btn-group dropend">
+                      <a
+                        href="service"
+                        className="dropdown-item dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Organization Certificate
+                      </a>
+                      <ul className="dropdown-menu">
+                        <li>
+                          <a href="/EnvironmetalImpact" className="dropdown-item">
+                            Environmental Impact Assessment (EIA)
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/EnvironmentalAudit" className="dropdown-item">
+                            Environmental Audit (EA)
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/EnvironmentalReport" className="dropdown-item">
+                            Environmental Report (ER)
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/PreAudit" className="dropdown-item">
+                            Pre Environmental Audit
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/EnvironmentalDirect" className="dropdown-item">
+                            Environment Direct Clearance
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <a href="/organization" className="dropdown-item">
+                      Organizational Structure
+                    </a>
+
+                    <a href="expert" className="dropdown-item">
+                      List of Expert / Firm
+                    </a>
+                  </div>
+                </div>
+
+                <a href="/gallery" className="nav-item nav-link">
                   Gallery
                 </a>
 
@@ -93,11 +149,11 @@ const Navbar = () => {
                     News and Events
                   </a>
 
-                  <div className="dropdown-menu bg-light border-0 m-0">
-                    <a href="feature" className="dropdown-item">
+                  <div className="dropdown-menu bg-ligdropdown-itemht border-0 m-0">
+                    <a href="/feature" className="dropdown-item">
                       Events
                     </a>
-                    <a href="appointment" className="dropdown-item">
+                    <a href="/appointment" className="dropdown-item">
                       Press Releases
                     </a>
                   </div>
@@ -109,23 +165,20 @@ const Navbar = () => {
                     className="nav-link dropdown-toggle"
                     data-bs-toggle="dropdown"
                   >
-                    History
+                    Library
                   </a>
 
                   <div className="dropdown-menu bg-light border-0 m-0">
-                    <a href="feature.html" className="dropdown-item">
-                      Reports
-                    </a>
-                    <a href="appointment.html" className="dropdown-item">
+                    <a href="/RulesAndRegulations" className="dropdown-item">
                       Rules and Regulations
                     </a>
-                    <a href="appointment.html" className="dropdown-item">
+                    <a href="/policies" className="dropdown-item">
                       Policies
                     </a>
                   </div>
                 </div>
 
-                <a href="contactus" className="nav-item nav-link">
+                <a href="/contactus" className="nav-item nav-link">
                   Contact Us
                 </a>
               </div>
@@ -157,9 +210,82 @@ const Navbar = () => {
           transition: 0.5s;
         }
 
+        /* Custom styles for dropend positioning */
+        .btn-group.dropend .dropdown-menu {
+          position: absolute;
+          top: 0;
+          left: 100%;
+          margin-top: 0;
+          margin-left: 0.125rem;
+          min-width: 280px;
+          white-space: nowrap;
+        }
+
+        /* Ensure proper hover behavior for dropend */
+        .btn-group.dropend:hover .dropdown-menu {
+          display: block;
+        }
+
+        .dropdown:hover .dropdown-menu {
+          display: block;
+        }
+
+        /* Hover effects for navigation items */
+        .nav-link:hover {
+          background-color: rgba(0, 123, 255, 0.1) !important;
+          color: #007bff !important;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+          background-color: #d0e6cc !important;
+          color: #0e0d0d !important;
+          transform: translateX(5px);
+          transition: all 0.3s ease;
+        }
+
+        /* Better text fitting */
+        .dropdown-menu {
+          padding: 0.5rem 0;
+        }
+
+        .dropdown-item {
+          padding: 0.5rem 1rem;
+          white-space: nowrap;
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+
+        /* Responsive text adjustments */
+        @media (max-width: 1200px) {
+          .dropdown-item {
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+          }
+
+          .btn-group.dropend .dropdown-menu {
+            min-width: 260px;
+          }
+        }
+
         @media (max-width: 991px) {
           .navbar-brand img {
             max-height: 80px !important;
+          }
+
+          /* On mobile, revert to normal dropdown behavior */
+          .btn-group.dropend .dropdown-menu {
+            position: static;
+            display: none;
+            margin-left: 1rem;
+            min-width: auto;
+          }
+
+          .dropdown-item {
+            font-size: 0.9rem;
+            white-space: normal;
+            word-wrap: break-word;
           }
         }
       `}</style>

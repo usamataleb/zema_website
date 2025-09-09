@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "../components/carousel";
 import Director from "../components/Director";
-import Service from "./Service";
+import Service from "./OrganizationStructure";
 import Features from "../components/Features ";
 import Leaders from "../components/Leaders";
 import Appointment from "../components/Appointment";
