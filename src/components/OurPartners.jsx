@@ -56,9 +56,9 @@ const PartnersCarousel = () => {
     { id: 1, logo: "./img/partners/TRA.jpg", name: "TRA" },
     { id: 2, logo: "./img/partners/ZRA.png", name: "ZRA" },
     { id: 3, logo: "./img/partners/IMMIGRATION.png", name: "IMMIGRATION" },
-    { id: 4, logo: "./img/partners/TRA.png", name: "TRA" },
-    { id: 5, logo: "./img/partners/TRA.png", name: "TRA" },
-    { id: 6, logo: "./img/partners/TRA.png", name: "TRA" }
+    { id: 4, logo: "./img/partners/ZIPA.jpeg", name: "ZIPA" },
+    { id: 5, logo: "./img/partners/ZCT.png", name: "ZCT" },
+  
   ];
 
   return (

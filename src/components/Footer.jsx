@@ -21,29 +21,32 @@ const Footer = () => {
 
           {/* Our Partners */}
           <div className="col-lg-3 col-md-6">
-            <h5 className="text-light mb-4">Washirika Wetu</h5>
+            <h5 className="text-light mb-4">Our Partners</h5>
             <a className="btn btn-link text-decoration-none" href="">
-              Mamlaka ya Uwekezaji Zanzibar (ZIPA)
+              Zanzibar Investment Promotion Authority (ZIPA)
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Tume ya Utalii Zanzibar (ZCT)
+              Zanzibar Tourism Commission (ZCT)
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Mamlaka ya Udhibiti wa Mafuta Zanzibar (ZPRA)
+              Zanzibar Revenue Authority (ZRA)
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Mamlaka ya Udhibiti Huduma Zanzibar (ZURA)
+              Zanzibar Utility Regulatory Authority (ZURA)
+            </a>
+            <a className="btn btn-link text-decoration-none" href="">
+               Tanzania Revenue Authority (TRA) 
             </a>
           </div>
 
           {/* Related Links */}
           <div className="col-lg-3 col-md-6">
-            <h5 className="text-light mb-4">Tovuti Linganifu</h5>
+            <h5 className="text-light mb-4">Related Links</h5>
             <a className="btn btn-link text-decoration-none" href="">
-              Ofisi ya Makamu wa Kwanza wa Rais - Zanzibar
+              Office of the First Vice President - Zanzibar
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Baraza la Taifa la Usimamizi wa Mazingira (NEMC)
+              National Environmental Management Council (NEMC)
             </a>
             <a className="btn btn-link text-decoration-none" href="">
               Admin Portal
@@ -55,27 +58,27 @@ const Footer = () => {
 
           {/* User Guide */}
           <div className="col-lg-3 col-md-6">
-            <h5 className="text-light mb-4">Mwongozo wa Mtumiaji</h5>
+            <h5 className="text-light mb-4">User Guidance</h5>
             <a className="btn btn-link text-decoration-none" href="">
               ZEMA ACT: 2015
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Sera ya Mazingira Zanzibar - 2013
+              Zanzibar Environmental Policy - 2013
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Udhibiti wa Mifuko ya Plastiki - 2018
+              Zanzibar Plastic Bags Control - 2018
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Fomu ya EIA
+              EIA Form
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Orodha ya Wataalam / Kampuni 2022/23
+              List of Experts / Companies 2022/23
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Kanuni na Miongozo Zaidi
+              Additional Regulations and Guidelines
             </a>
             <a className="btn btn-link text-decoration-none" href="">
-              Sheria na Sera Zaidi
+              Additional Legal Frameworks and Policies
             </a>
           </div>
         </div>
@@ -86,10 +89,10 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; {new Date().getFullYear()} <a>ZEMA</a>, Haki zote zimehifadhiwa.
+              &copy; {new Date().getFullYear()} <a>ZEMA</a>, All rights reserved.
             </div>
             <div className="col-md-6 text-center text-md-end ">
-              <a>Imetengenezwa na Kitengo cha Tehama</a>
+              <a>Developed by the IT Department</a>
             </div>
           </div>
         </div>

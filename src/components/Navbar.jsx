@@ -53,7 +53,7 @@ const Navbar = () => {
             >
               <div>
                 <h2 className="text-dark fw-bold ">
-                  Revolutionary Government of Zanzibar
+                  The Revolutionary Government of Zanzibar
                 </h2>
                 <h2 className="text-dark fw-bold mb-0 mb-2">
                   Zanzibar Environmental Management Authority (ZEMA)
