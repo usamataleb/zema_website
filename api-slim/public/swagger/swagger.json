@@ -1,0 +1,1728 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Swagger",
+    "version": "1.0.0",
+    "description": "",
+    "contact": {
+      "email": "abdibaker1@gmail.com",
+      "name": "",
+      "url": "http://0.0.0.0:8000"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://0.0.0.0:8000",
+      "description": "Local server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "responses": {
+      "UnauthorizedError": {
+        "description": "Access token is missing or invalid"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": ["User"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      },
+      "post": {
+        "tags": ["User"],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      }
+    },
+    "/posts": {
+      "get": {
+        "tags": ["Post"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Post"],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "authorId": {
+                    "type": "integer"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "delete": {
+        "tags": ["User"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      },
+      "get": {
+        "tags": ["User"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      },
+      "put": {
+        "tags": ["User"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      }
+    },
+    "/posts/{id}": {
+      "get": {
+        "tags": ["Post"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Post"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Post"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "authorId": {
+                    "type": "integer"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      }
+    }
+,
+"/users": {
+  "get": {
+    "tags": ["User"],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+  "id": {
+    "type": "string"
+  },
+  "username": {
+    "type": "string"
+  },
+  "email": {
+    "type": "string"
+  },
+  "password": {
+    "type": "string"
+  }
+}
+              }
+            }
+          }
+        }
+      },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "post": {
+    "tags": ["User"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "username": {
+    "type": "string"
+  },
+  "email": {
+    "type": "string"
+  },
+  "password": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "201": { "description": "successful created" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "409": { "description": "Data already exists" },
+      "404": { "description": "Foreign key Not found" },
+      "500": { "description": "Internal server error" }
+    }
+  }
+},
+"/users/{id}": {
+  "get": {
+    "tags": ["User"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+  "id": {
+    "type": "string"
+  },
+  "username": {
+    "type": "string"
+  },
+  "email": {
+    "type": "string"
+  },
+  "password": {
+    "type": "string"
+  }
+}
+            }
+          }
+        }
+      },
+      "400": { "description": "Invalid primaryKey supplied" },
+      "404": { "description": "Not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "put": {
+    "tags": ["User"],
+    "parameters": [
+      {
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "username": {
+    "type": "string"
+  },
+  "email": {
+    "type": "string"
+  },
+  "password": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "204": { "description": "successful updated" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "500": { "description": "Internal server error" }
+    }
+  },
+  "delete": {
+    "tags": ["User"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "204": { "description": "successful operation" },
+      "404": { "description": "School not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  }
+}
+,
+"/websites": {
+  "get": {
+    "tags": ["Website"],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+  "id": {
+    "type": "string"
+  },
+  "name": {
+    "type": "string"
+  },
+  "about": {
+    "type": "string"
+  },
+  "userId": {
+    "type": "string"
+  },
+  "isDefault": {
+    "type": "string"
+  }
+}
+              }
+            }
+          }
+        }
+      },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "post": {
+    "tags": ["Website"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "name": {
+    "type": "string"
+  },
+  "about": {
+    "type": "string"
+  },
+  "userId": {
+    "type": "string"
+  },
+  "isDefault": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "201": { "description": "successful created" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "409": { "description": "Data already exists" },
+      "404": { "description": "Foreign key Not found" },
+      "500": { "description": "Internal server error" }
+    }
+  }
+},
+"/websites/{id}": {
+  "get": {
+    "tags": ["Website"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+  "id": {
+    "type": "string"
+  },
+  "name": {
+    "type": "string"
+  },
+  "about": {
+    "type": "string"
+  },
+  "userId": {
+    "type": "string"
+  },
+  "isDefault": {
+    "type": "string"
+  }
+}
+            }
+          }
+        }
+      },
+      "400": { "description": "Invalid primaryKey supplied" },
+      "404": { "description": "Not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "put": {
+    "tags": ["Website"],
+    "parameters": [
+      {
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "name": {
+    "type": "string"
+  },
+  "about": {
+    "type": "string"
+  },
+  "userId": {
+    "type": "string"
+  },
+  "isDefault": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "204": { "description": "successful updated" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "500": { "description": "Internal server error" }
+    }
+  },
+  "delete": {
+    "tags": ["Website"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "204": { "description": "successful operation" },
+      "404": { "description": "School not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  }
+}
+,
+"/images": {
+  "get": {
+    "tags": ["Image"],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+  "id": {
+    "type": "string"
+  },
+  "src": {
+    "type": "string"
+  },
+  "width": {
+    "type": "string"
+  },
+  "height": {
+    "type": "string"
+  },
+  "filename": {
+    "type": "string"
+  },
+  "filesize": {
+    "type": "string"
+  },
+  "mimetype": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+              }
+            }
+          }
+        }
+      },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "post": {
+    "tags": ["Image"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "src": {
+    "type": "string"
+  },
+  "width": {
+    "type": "string"
+  },
+  "height": {
+    "type": "string"
+  },
+  "filename": {
+    "type": "string"
+  },
+  "filesize": {
+    "type": "string"
+  },
+  "mimetype": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "201": { "description": "successful created" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "409": { "description": "Data already exists" },
+      "404": { "description": "Foreign key Not found" },
+      "500": { "description": "Internal server error" }
+    }
+  }
+},
+"/images/{id}": {
+  "get": {
+    "tags": ["Image"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+  "id": {
+    "type": "string"
+  },
+  "src": {
+    "type": "string"
+  },
+  "width": {
+    "type": "string"
+  },
+  "height": {
+    "type": "string"
+  },
+  "filename": {
+    "type": "string"
+  },
+  "filesize": {
+    "type": "string"
+  },
+  "mimetype": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+            }
+          }
+        }
+      },
+      "400": { "description": "Invalid primaryKey supplied" },
+      "404": { "description": "Not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "put": {
+    "tags": ["Image"],
+    "parameters": [
+      {
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "src": {
+    "type": "string"
+  },
+  "width": {
+    "type": "string"
+  },
+  "height": {
+    "type": "string"
+  },
+  "filename": {
+    "type": "string"
+  },
+  "filesize": {
+    "type": "string"
+  },
+  "mimetype": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "204": { "description": "successful updated" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "500": { "description": "Internal server error" }
+    }
+  },
+  "delete": {
+    "tags": ["Image"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "204": { "description": "successful operation" },
+      "404": { "description": "School not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  }
+}
+,
+"/carousel-items": {
+  "get": {
+    "tags": ["CarouselItem"],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+  "id": {
+    "type": "string"
+  },
+  "image": {
+    "type": "string"
+  },
+  "title": {
+    "type": "string"
+  },
+  "subtitle": {
+    "type": "string"
+  },
+  "active": {
+    "type": "string"
+  },
+  "order": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+              }
+            }
+          }
+        }
+      },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "post": {
+    "tags": ["CarouselItem"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "image": {
+    "type": "string"
+  },
+  "title": {
+    "type": "string"
+  },
+  "subtitle": {
+    "type": "string"
+  },
+  "active": {
+    "type": "string"
+  },
+  "order": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "201": { "description": "successful created" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "409": { "description": "Data already exists" },
+      "404": { "description": "Foreign key Not found" },
+      "500": { "description": "Internal server error" }
+    }
+  }
+},
+"/carousel-items/{id}": {
+  "get": {
+    "tags": ["CarouselItem"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+  "id": {
+    "type": "string"
+  },
+  "image": {
+    "type": "string"
+  },
+  "title": {
+    "type": "string"
+  },
+  "subtitle": {
+    "type": "string"
+  },
+  "active": {
+    "type": "string"
+  },
+  "order": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+            }
+          }
+        }
+      },
+      "400": { "description": "Invalid primaryKey supplied" },
+      "404": { "description": "Not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "put": {
+    "tags": ["CarouselItem"],
+    "parameters": [
+      {
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "image": {
+    "type": "string"
+  },
+  "title": {
+    "type": "string"
+  },
+  "subtitle": {
+    "type": "string"
+  },
+  "active": {
+    "type": "string"
+  },
+  "order": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "204": { "description": "successful updated" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "500": { "description": "Internal server error" }
+    }
+  },
+  "delete": {
+    "tags": ["CarouselItem"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "204": { "description": "successful operation" },
+      "404": { "description": "School not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  }
+}
+,
+"/tags": {
+  "get": {
+    "tags": ["Tag"],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+  "id": {
+    "type": "string"
+  },
+  "name": {
+    "type": "string"
+  }
+}
+              }
+            }
+          }
+        }
+      },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "post": {
+    "tags": ["Tag"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "name": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "201": { "description": "successful created" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "409": { "description": "Data already exists" },
+      "404": { "description": "Foreign key Not found" },
+      "500": { "description": "Internal server error" }
+    }
+  }
+},
+"/tags/{id}": {
+  "get": {
+    "tags": ["Tag"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+  "id": {
+    "type": "string"
+  },
+  "name": {
+    "type": "string"
+  }
+}
+            }
+          }
+        }
+      },
+      "400": { "description": "Invalid primaryKey supplied" },
+      "404": { "description": "Not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "put": {
+    "tags": ["Tag"],
+    "parameters": [
+      {
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "name": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "204": { "description": "successful updated" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "500": { "description": "Internal server error" }
+    }
+  },
+  "delete": {
+    "tags": ["Tag"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "204": { "description": "successful operation" },
+      "404": { "description": "School not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  }
+}
+,
+"/image-tags": {
+  "get": {
+    "tags": ["ImageTag"],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+  "id": {
+    "type": "string"
+  },
+  "imageId": {
+    "type": "string"
+  },
+  "tagId": {
+    "type": "string"
+  }
+}
+              }
+            }
+          }
+        }
+      },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "post": {
+    "tags": ["ImageTag"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "imageId": {
+    "type": "string"
+  },
+  "tagId": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "201": { "description": "successful created" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "409": { "description": "Data already exists" },
+      "404": { "description": "Foreign key Not found" },
+      "500": { "description": "Internal server error" }
+    }
+  }
+},
+"/image-tags/{id}": {
+  "get": {
+    "tags": ["ImageTag"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+  "id": {
+    "type": "string"
+  },
+  "imageId": {
+    "type": "string"
+  },
+  "tagId": {
+    "type": "string"
+  }
+}
+            }
+          }
+        }
+      },
+      "400": { "description": "Invalid primaryKey supplied" },
+      "404": { "description": "Not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "put": {
+    "tags": ["ImageTag"],
+    "parameters": [
+      {
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "imageId": {
+    "type": "string"
+  },
+  "tagId": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "204": { "description": "successful updated" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "500": { "description": "Internal server error" }
+    }
+  },
+  "delete": {
+    "tags": ["ImageTag"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "204": { "description": "successful operation" },
+      "404": { "description": "School not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  }
+}
+,
+"/activity-logs": {
+  "get": {
+    "tags": ["ActivityLog"],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+  "id": {
+    "type": "string"
+  },
+  "userId": {
+    "type": "string"
+  },
+  "action": {
+    "type": "string"
+  },
+  "details": {
+    "type": "string"
+  },
+  "ipAddress": {
+    "type": "string"
+  },
+  "userAgent": {
+    "type": "string"
+  }
+}
+              }
+            }
+          }
+        }
+      },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "post": {
+    "tags": ["ActivityLog"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "userId": {
+    "type": "string"
+  },
+  "action": {
+    "type": "string"
+  },
+  "details": {
+    "type": "string"
+  },
+  "ipAddress": {
+    "type": "string"
+  },
+  "userAgent": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "201": { "description": "successful created" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "409": { "description": "Data already exists" },
+      "404": { "description": "Foreign key Not found" },
+      "500": { "description": "Internal server error" }
+    }
+  }
+},
+"/activity-logs/{id}": {
+  "get": {
+    "tags": ["ActivityLog"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+  "id": {
+    "type": "string"
+  },
+  "userId": {
+    "type": "string"
+  },
+  "action": {
+    "type": "string"
+  },
+  "details": {
+    "type": "string"
+  },
+  "ipAddress": {
+    "type": "string"
+  },
+  "userAgent": {
+    "type": "string"
+  }
+}
+            }
+          }
+        }
+      },
+      "400": { "description": "Invalid primaryKey supplied" },
+      "404": { "description": "Not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "put": {
+    "tags": ["ActivityLog"],
+    "parameters": [
+      {
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "userId": {
+    "type": "string"
+  },
+  "action": {
+    "type": "string"
+  },
+  "details": {
+    "type": "string"
+  },
+  "ipAddress": {
+    "type": "string"
+  },
+  "userAgent": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "204": { "description": "successful updated" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "500": { "description": "Internal server error" }
+    }
+  },
+  "delete": {
+    "tags": ["ActivityLog"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "204": { "description": "successful operation" },
+      "404": { "description": "School not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  }
+}
+,
+"/packages": {
+  "get": {
+    "tags": ["Package"],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+  "id": {
+    "type": "string"
+  },
+  "name": {
+    "type": "string"
+  },
+  "price": {
+    "type": "number"
+  },
+  "location": {
+    "type": "string"
+  },
+  "src": {
+    "type": "string"
+  },
+  "description": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+              }
+            }
+          }
+        }
+      },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "post": {
+    "tags": ["Package"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "name": {
+    "type": "string"
+  },
+  "price": {
+    "type": "number"
+  },
+  "location": {
+    "type": "string"
+  },
+  "src": {
+    "type": "string"
+  },
+  "description": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "201": { "description": "successful created" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "409": { "description": "Data already exists" },
+      "404": { "description": "Foreign key Not found" },
+      "500": { "description": "Internal server error" }
+    }
+  }
+},
+"/packages/{id}": {
+  "get": {
+    "tags": ["Package"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+  "id": {
+    "type": "string"
+  },
+  "name": {
+    "type": "string"
+  },
+  "price": {
+    "type": "number"
+  },
+  "location": {
+    "type": "string"
+  },
+  "src": {
+    "type": "string"
+  },
+  "description": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+            }
+          }
+        }
+      },
+      "400": { "description": "Invalid primaryKey supplied" },
+      "404": { "description": "Not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  },
+  "put": {
+    "tags": ["Package"],
+    "parameters": [
+      {
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+  "name": {
+    "type": "string"
+  },
+  "price": {
+    "type": "number"
+  },
+  "location": {
+    "type": "string"
+  },
+  "src": {
+    "type": "string"
+  },
+  "description": {
+    "type": "string"
+  },
+  "websiteId": {
+    "type": "string"
+  }
+}
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "204": { "description": "successful updated" },
+      "400": { "description": "Validation failed" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" },
+      "500": { "description": "Internal server error" }
+    }
+  },
+  "delete": {
+    "tags": ["Package"],
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {"type":"string"}
+      }
+    ],
+    "responses": {
+      "204": { "description": "successful operation" },
+      "404": { "description": "School not found" },
+      "401": { "$ref": "#/components/responses/UnauthorizedError" }
+    }
+  }
+}
+  }
+}

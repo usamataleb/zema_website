@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "../components/carousel";
+import Slider from "../components/Slider";
 import Director from "../components/Director";
 import Service from "./OrganizationStructure";
 import Features from "../components/Features ";
@@ -23,7 +23,7 @@ const Home = () => {
         <RightPanel />
       </div>
 
-        <Slider/>
+        {/* <Slider/> */}
      
       <NewsEvent />
       <OurPartner />

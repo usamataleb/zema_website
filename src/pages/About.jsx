@@ -8,10 +8,9 @@ const About = () => {
   return (
     <>
     <AboutZEMA />
-    <Facts />
-    <Director />
     {/* <Facts /> */}
-    <Leaders />
+    <Director />
+    {/* <Leaders /> */}
     </>
   )
 }

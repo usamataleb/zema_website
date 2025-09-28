@@ -1,13 +1,14 @@
 import NewsCard from "./NewsCard";
-import  { NewsData } from "../lib/constant"; 
+import { NewsData } from "../lib/constant";
 
 const NewsEvents = (props) => {
-
   return (
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center mx-auto" style={{ maxWidth: "500px" }}>
-          <h1 className="display-6 mb-5">{props.title || "News & Events"}</h1>
+          <h1 className="display-6 mb-5 partners-title ">
+            {props.title || "News & Events"}
+          </h1>
         </div>
         <div className="row g-4">
           {NewsData.map((news, index) => (
@@ -17,10 +18,10 @@ const NewsEvents = (props) => {
               key={index}
             >
               <NewsCard
-                image={news.image}
+                image={news.src}
                 title={news.title}
                 description={news.description}
-                buttonLink={`/newsdetails/${index + 1}`}
+                buttonLink={`/newsdetails/${news.id}`}
               />
             </div>
           ))}

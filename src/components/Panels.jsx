@@ -1,14 +1,31 @@
 import Carousel from "./carousel";
 import Directorsample from "../components/Directorsample";
 import RightPanel from "./rightpanel";
+import { useEffect, useState } from "react";
+import AppService from "../lib/appServices";
+
 
 
 const Panels = () => {
-  const images = [
-    "./img/carousel-1.jpg",
-    "./img/carousel-2.jpg",
-    "https://images.unsplash.com/photo-1508724735996-b41f69dfe2a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1156&q=80",
-  ];
+  // const images = [
+  //   "./img/carousel-1.jpg",
+  //   "./img/carousel-2.jpg",
+  //   "https://images.unsplash.com/photo-1508724735996-b41f69dfe2a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1156&q=80",
+  // ];
+
+    const [carrouselData, setCarrouselData] = useState([]);
+  
+    useEffect(() => {
+      async function fetchGalleryData() {
+        const data = await AppService.getCarousel();
+        setCarrouselData(data);
+        console.log("Carousel Data:", data.image);
+      }
+      fetchGalleryData();
+    }, []);
+
+
+
 
   return (
     <div
@@ -30,7 +47,7 @@ const Panels = () => {
                 className="d-flex align-items-center justify-content-center"
                 style={sliderStyles.darkPanel}
               >
-                <Carousel images={images} />
+                <Carousel images={carrouselData.map((item) => item.image)} />
               </div>
             </div>
 

@@ -5,6 +5,8 @@ import { NewsData } from '../lib/constant';
 const NewsDetails = () => {
   const { id } = useParams();
 
+
+
   const newsItem = NewsData.find(item => item.id === parseInt(id));
 
   if (!newsItem) {
@@ -57,7 +59,7 @@ const NewsDetails = () => {
           {/* Featured Image */}
           <div className="mb-4">
             <img 
-              src={"../"+newsItem.image} 
+              src={newsItem.src} 
               alt={newsItem.title} 
               className="img-fluid rounded shadow"
               style={{ width: '100%', height: '400px', objectFit: 'cover' }}
