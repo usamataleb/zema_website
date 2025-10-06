@@ -118,8 +118,6 @@ model ActivityLog {
 model Package {
   id          Int      @id @default(autoincrement())
   name        String   @unique
-  price       Float
-  location    String
   src         String?
   description String
   websiteId   Int
@@ -128,6 +126,34 @@ model Package {
   updatedAt   DateTime @updatedAt
 
   @@index([websiteId, name])
-  @@index([price])
   @@map("packages")
 }
+
+
+model Notice {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  issued_by   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Announcement {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  issued_by   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model PressRelease {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  issued_by   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+} 
+

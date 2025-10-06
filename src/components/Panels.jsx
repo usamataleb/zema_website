@@ -34,14 +34,12 @@ const Panels = () => {
     >
       <div
         className="my-5 px-0 px-md-0 px-lg-5"
-        style={sliderStyles.container}
       >
         <div className="p-4" style={sliderStyles.sliderContainer}>
           <div className="row g-4">
             {/* Left Panel */}
             <div
-              className="col-md-7 px-0 px-md-0 px-lg-5"
-              style={sliderStyles.leftPanel}
+              className="col-md-8 px-0 px-md-0 px-lg-5"
             >
               <div
                 className="d-flex align-items-center justify-content-center"
@@ -52,7 +50,7 @@ const Panels = () => {
             </div>
 
             {/* Right Panel */}
-            <div className="col-md-5 px-0 px-md-0 px-lg-5 d-none d-md-block d-lg-block">
+            <div className="col-md-4 px-0 px-md-0 px-lg-3 d-none d-md-block d-lg-block">
               <Directorsample />
             </div>
           </div>
@@ -74,10 +72,7 @@ const sliderStyles = {
     boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
     overflow: "hidden",
   },
-  leftPanel: {
-    maxHeight: "200px",
-    padding: "20px",
-  },
+
   tabNav: {
     borderBottom: "2px solid #e9ecef",
   },

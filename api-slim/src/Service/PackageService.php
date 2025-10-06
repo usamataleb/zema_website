@@ -25,7 +25,7 @@ final class PackageService
     public function getAll(): array
     {
         return $this->conn->fetchAllAssociative(
-            'SELECT id, name, price, location, src, description, websiteId as websiteId
+            'SELECT id, name,  src, description, websiteId as websiteId
              FROM packages
              ORDER BY id ASC'
         );
@@ -34,7 +34,7 @@ final class PackageService
     public function getOne(string $id): array
     {
         $result = $this->conn->fetchAssociative(
-            'SELECT id, name, price, location, src, description, websiteId as websiteId 
+            'SELECT id, name, src, description, websiteId as websiteId 
              FROM packages 
              WHERE id = ?',
              [$id]
@@ -52,7 +52,7 @@ final class PackageService
     public function getByWebsiteId(string $websiteId): array
     {
         return $this->conn->fetchAllAssociative(
-            'SELECT id, name, price, location, src, description, websiteId as websiteId
+            'SELECT id, name, src, description, websiteId as websiteId
              FROM packages 
              WHERE websiteId = ? 
              ORDER BY createdAt DESC',
@@ -148,7 +148,7 @@ public function create(array $data): int
     private function getOneInternal(string $id): array
     {
         $result = $this->conn->fetchAssociative(
-            'SELECT id, name, price, location, src, description, websiteId 
+            'SELECT id, name, src, description, websiteId 
              FROM packages 
              WHERE id = ?',
              [$id]

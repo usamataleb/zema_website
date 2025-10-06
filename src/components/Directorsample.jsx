@@ -8,10 +8,9 @@ const DirectorSample = () => {
     "Click to read the full message from the Director General of ZEMA.";
 
   return (
-    <div className="container py-4">
-      {/* Wall Card */}
+    <>
       <div
-        className="card director-card shadow-lg border-0"
+        className="card director-card shadow-lg border-0 "
         onClick={() => setShowModal(true)}
       >
         {/* Image */}
@@ -27,9 +26,8 @@ const DirectorSample = () => {
         </div>
 
         {/* Footer */}
-        <div className=  "card-body text-center bg-primary text-white">
-          <h5 className="card-title mb-0">ZEMA</h5>
-          <small >Director General</small>
+        <div className="card-body text-center bg-primary text-white">
+          <small>Director General</small>
         </div>
       </div>
 
@@ -57,22 +55,23 @@ const DirectorSample = () => {
                   <p>Dear Visitors,</p>
                   <p>
                     On behalf of the Zanzibar Environmental Management Authority
-                    (ZEMA), I am delighted to welcome you to our official website.
+                    (ZEMA), I am delighted to welcome you to our official
+                    website.
                   </p>
                   <p>
-                    Here you will find valuable resources regarding environmental
-                    issues in Zanzibar such as the Environment Policy of 2013, the
-                    Environmental Management Act, 2015, regulations, and other
-                    procedures.
+                    Here you will find valuable resources regarding
+                    environmental issues in Zanzibar such as the Environment
+                    Policy of 2013, the Environmental Management Act, 2015,
+                    regulations, and other procedures.
                   </p>
                   <p>
-                    We hope this site helps you understand our work as a regulatory
-                    body and the services we provide to ensure the harmony of our
-                    environment and its sustainable development.
+                    We hope this site helps you understand our work as a
+                    regulatory body and the services we provide to ensure the
+                    harmony of our environment and its sustainable development.
                   </p>
                   <p>
-                    Thank you for visiting, and please don’t hesitate to contact us
-                    for further information.
+                    Thank you for visiting, and please don’t hesitate to contact
+                    us for further information.
                   </p>
                   <p>I thank you,</p>
                   <p>
@@ -102,7 +101,7 @@ const DirectorSample = () => {
           ></div>
         </>
       )}
-    </div>
+    </>
   );
 };
 

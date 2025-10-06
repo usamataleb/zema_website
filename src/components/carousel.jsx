@@ -59,9 +59,8 @@ const Carousel = (props) => {
   }, []);
 
   return (
-    <div className="row ">
-      <div className="col-lg-12 col-md-12 col-sm-12 width-100">
-        <div id={carouselId} ref={carouselRef} className="carousel slide">
+
+        <div id={carouselId} ref={carouselRef} className="carousel slide" >
           <div className="carousel-indicators">
             {images.map((_, index) => (
               <button
@@ -108,8 +107,6 @@ const Carousel = (props) => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
-    </div>
   );
 };
 

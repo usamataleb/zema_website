@@ -1,9 +1,13 @@
 const Footer = () => {
   return (
-    <footer className="footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s" style={{
-      background: 'linear-gradient(135deg, #1a6a3d 0%, #2c8c5a 100%)',
-      color: 'white',
-    }}>
+    <footer
+      className="footer mt-5 pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+      style={{
+        background: "linear-gradient(135deg, #1a6a3d 0%, #2c8c5a 100%)",
+        color: "white",
+      }}
+    >
       <div className="container py-5">
         <div className="row g-5">
           {/* Contact Us */}
@@ -15,13 +19,16 @@ const Footer = () => {
               <div className="footer-icon-wrapper me-3">
                 <i className="fa fa-map-marker-alt"></i>
               </div>
-              <span>P.O Box 1234, Zanzibar</span>
+              <span>
+                P.O.Box 2808 26 Malawi Road,Maruhubi, 71111 Mjini Magharib,
+                Zanzibar.
+              </span>
             </div>
             <div className="d-flex align-items-center mb-3">
               <div className="footer-icon-wrapper me-3">
                 <i className="fa fa-phone-alt"></i>
               </div>
-              <span>+255 000 000 000</span>
+              <span>+255-773-734240</span>
             </div>
             <div className="d-flex align-items-center mb-3">
               <div className="footer-icon-wrapper me-3">
@@ -55,19 +62,24 @@ const Footer = () => {
             </h5>
             <div className="footer-links">
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-arrow-right me-2 small"></i> Zanzibar Investment Promotion Authority (ZIPA)
+                <i className="fas fa-arrow-right me-2 small"></i> Zanzibar
+                Investment Promotion Authority (ZIPA)
               </a>
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-arrow-right me-2 small"></i> Zanzibar Tourism Commission (ZCT)
+                <i className="fas fa-arrow-right me-2 small"></i> Zanzibar
+                Tourism Commission (ZCT)
               </a>
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-arrow-right me-2 small"></i> Zanzibar Revenue Authority (ZRA)
+                <i className="fas fa-arrow-right me-2 small"></i> Zanzibar
+                Revenue Authority (ZRA)
               </a>
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-arrow-right me-2 small"></i> Zanzibar Utility Regulatory Authority (ZURA)
+                <i className="fas fa-arrow-right me-2 small"></i> Zanzibar
+                Utility Regulatory Authority (ZURA)
               </a>
               <a href="#" className="d-block mb-0">
-                <i className="fas fa-arrow-right me-2 small"></i> Tanzania Revenue Authority (TRA)
+                <i className="fas fa-arrow-right me-2 small"></i> Tanzania
+                Revenue Authority (TRA)
               </a>
             </div>
           </div>
@@ -79,28 +91,38 @@ const Footer = () => {
             </h5>
             <div className="footer-links">
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-arrow-right me-2 small"></i> Office of the First Vice President - Zanzibar
+                <i className="fas fa-arrow-right me-2 small"></i> Office of the
+                First Vice President - Zanzibar
               </a>
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-arrow-right me-2 small"></i> National Environmental Management Council (NEMC)
+                <i className="fas fa-arrow-right me-2 small"></i> National
+                Environmental Management Council (NEMC)
               </a>
-              <a href="#" className="d-block mb-2">
+              <a href="https://zema.go.tz/admin" className="d-block mb-2">
                 <i className="fas fa-arrow-right me-2 small"></i> Admin Portal
               </a>
               <a href="#" className="d-block mb-0">
                 <i className="fas fa-arrow-right me-2 small"></i> Staff Mail
               </a>
             </div>
-            
+
             {/* Quick Contact Form */}
             <div className="mt-4">
               <h6 className="text-white mb-3">Quick Contact</h6>
               <form>
                 <div className="mb-2">
-                  <input type="email" className="form-control form-control-sm" placeholder="Your Email" />
+                  <input
+                    type="email"
+                    className="form-control form-control-sm"
+                    placeholder="Your Email"
+                  />
                 </div>
                 <div className="mb-2">
-                  <textarea className="form-control form-control-sm" rows="2" placeholder="Message"></textarea>
+                  <textarea
+                    className="form-control form-control-sm"
+                    rows="2"
+                    placeholder="Message"
+                  ></textarea>
                 </div>
                 <button className="btn btn-light btn-sm w-100">Send</button>
               </form>
@@ -117,22 +139,27 @@ const Footer = () => {
                 <i className="fas fa-file-alt me-2 small"></i> ZEMA ACT: 2015
               </a>
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-file-alt me-2 small"></i> Zanzibar Environmental Policy - 2013
+                <i className="fas fa-file-alt me-2 small"></i> Zanzibar
+                Environmental Policy - 2013
               </a>
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-file-alt me-2 small"></i> Zanzibar Plastic Bags Control - 2018
+                <i className="fas fa-file-alt me-2 small"></i> Zanzibar Plastic
+                Bags Control - 2018
               </a>
               <a href="#" className="d-block mb-2">
                 <i className="fas fa-file-alt me-2 small"></i> EIA Form
               </a>
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-users me-2 small"></i> List of Experts / Companies 2022/23
+                <i className="fas fa-users me-2 small"></i> List of Experts /
+                Companies 2022/23
               </a>
               <a href="#" className="d-block mb-2">
-                <i className="fas fa-gavel me-2 small"></i> Additional Regulations
+                <i className="fas fa-gavel me-2 small"></i> Additional
+                Regulations
               </a>
               <a href="#" className="d-block mb-0">
-                <i className="fas fa-balance-scale me-2 small"></i> Legal Frameworks
+                <i className="fas fa-balance-scale me-2 small"></i> Legal
+                Frameworks
               </a>
             </div>
           </div>
@@ -140,20 +167,30 @@ const Footer = () => {
       </div>
 
       {/* Bottom copyright */}
-      <div className="container-fluid copyright py-3" style={{
-        background: 'rgba(0, 0, 0, 0.2)',
-        borderTop: '1px solid rgba(255, 255, 255, 0.1)'
-      }}>
+      <div
+        className="container-fluid copyright py-3"
+        style={{
+          background: "rgba(0, 0, 0, 0.2)",
+          borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+        }}
+      >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
               <span className="text-light">
-                &copy; {new Date().getFullYear()} <a href="#" className="text-white text-decoration-none">ZEMA</a>, All rights reserved.
+                &copy; {new Date().getFullYear()}{" "}
+                <a href="#" className="text-white text-decoration-none">
+                  ZEMA
+                </a>
+                , All rights reserved.
               </span>
             </div>
             <div className="col-md-6 text-center text-md-end">
               <span className="text-light">
-                Developed by the <a href="#" className="text-white text-decoration-none">IT Department</a>
+                Developed by the{" "}
+                <a href="#" className="text-white text-decoration-none">
+                  IT Department
+                </a>
               </span>
             </div>
           </div>

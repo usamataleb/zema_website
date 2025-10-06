@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default class AppService {
-  static API_BASE = "http://localhost:8000";
+  static API_BASE = "/api"; 
 
   // Configure axios instance with default settings
   static axiosInstance = axios.create({
@@ -72,6 +72,19 @@ export default class AppService {
       return response.data || [];
     } catch (error) {
       console.error("AppService.getPackages error:", error);
+      if (axios.isAxiosError(error)) {
+        this.handleAxiosError(error);
+      }
+      return [];
+    }
+  }
+
+  static async getRegulations() {
+    try {
+      const response = await this.axiosInstance.get('/regulations');
+      return response.data || [];
+    } catch (error) {
+      console.error("AppService.getRegulations error:", error);
       if (axios.isAxiosError(error)) {
         this.handleAxiosError(error);
       }

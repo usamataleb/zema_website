@@ -2,24 +2,25 @@
 
 declare(strict_types=1);
 
+use Slim\App;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
-use Slim\App;
+use App\Controller\TagController;
 use App\Controller\AuthController;
 use App\Controller\UserController;
-use App\Controller\WebsiteController;
-use App\Controller\ImageController;
-use App\Controller\CarouselItemController;
-use App\Controller\TagController;
-use App\Controller\ImageTagController;
-use App\Controller\ActivityLogController;
-use App\Controller\PackageController;
 use App\Middleware\AuthMiddleware;
-use App\Middleware\ValidationMiddleware;
+use App\Controller\ImageController;
+use App\Controller\PackageController;
+use App\Controller\WebsiteController;
+use App\Controller\ImageTagController;
 use App\Middleware\RateLimitMiddleware;
+use App\Controller\RegulationController;
+use App\Middleware\ValidationMiddleware;
+use App\Controller\ActivityLogController;
+use App\Controller\CarouselItemController;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 
 return static function (App $app) {
 
@@ -121,7 +122,29 @@ return static function (App $app) {
     $app->post('/{websiteId}/upload', [PackageController::class, 'upload'])->add($authMiddleware);
   });
 
+  // --------------- Regulation Routes ---------------- //
+  $app->group('/regulations', function ($app) use ($authMiddleware) {
+    // Get all regulations (all sections)
+    $app->get('', [RegulationController::class, 'getAll']);
 
+    // Section-specific routes
+    $app->group('/{section}', function ($app) use ($authMiddleware) {
+      // Get all items in a section
+      $app->get('', [RegulationController::class, 'getBySection']);
+
+      // Create new item in a section
+      $app->post('', [RegulationController::class, 'create'])->add($authMiddleware);
+
+      // Get single item from section
+      $app->get('/{id}', [RegulationController::class, 'getOne']);
+
+      // Update item in section
+      $app->put('/{id}', [RegulationController::class, 'update'])->add($authMiddleware);
+
+      // Delete item from section
+      $app->delete('/{id}', [RegulationController::class, 'delete'])->add($authMiddleware);
+    });
+  });
 
 
   return $app;

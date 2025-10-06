@@ -18,7 +18,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@prisma/client": "6.4.1"
+    "@prisma/client": "^6.15.0"
   },
   "prisma": {
     "seed": "npx tsx ./prisma/seed.ts"

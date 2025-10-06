@@ -1,41 +1,58 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AppService from "../lib/appServices";
 
 function RightPanel() {
   const [activeTab, setActiveTab] = useState("NOTICE");
 
-  const tabs = ["NOTICE", "ANNOUNCEMENT", "PRESS RELEASE","REGULATION & GUIDANCE", "POLICIES & LAWS"];
+  const [regulationData, setRegulationData] = useState({});
+
+
+useEffect (() => {
+  async function fetchRegulationData() {
+    const data = await AppService.getRegulations();
+    setRegulationData(data);
+    console.log("Regulation Data:", data.data.notices[0]?.title);
+  }
+  fetchRegulationData();
+}
+, [])
+
+
+
+  const tabs = [
+    "NOTICE",
+     "ANNOUNCEMENT", 
+    "PRESS RELEASE",
+    // "REGULATION & GUIDANCE",
+
+    //  "POLICIES & LAWS"
+    ];
     const documentData = {
     NOTICE: {
       title: "SPECIAL NOTICE",
-      subtitle: "INVESTORS WITHOUT LAND LEASE AGREEMENTS",
+      subtitle: regulationData.data?.notices?.[0]?.title || "NO NOTICE AVAILABLE",
       content: [
-        "The Zanzibar Environmental Management Authority (ZEMA) kindly requests all Approved investors who have been issued and approved Investment License but do not have land lease agreement to contact ZIPA at their earliest convenience.",
-        "This initiative is intended to identify challenges that may be delaying the lease process, and to ensure that all approved projects proceed smoothly with their intended projects.",
-        "We appreciate your cooperation and remain committed to providing continued support throughout your investment journey in Zanzibar.",
+        regulationData.data?.notices?.[0]?.description || "No description available.",
       ],
-      signedBy: "Executive Director",
+      signedBy: regulationData.data?.notices?.[0]?.issued_by || "Director General",
       icon: "🏛️",
     },
    "ANNOUNCEMENT": {
       title: "ENVIRONMENT ANNOUNCEMENT",
-      subtitle: "NEW ENVIRONMENT OPPORTUNITIES IN ZANZIBAR",
+      subtitle: regulationData.data?.announcements?.[0]?.title || "NO ANNOUNCEMENT AVAILABLE",
       content: [
-        "The Zanzibar Environmental Management Authority announces new investment opportunities in the tourism and manufacturing sectors. We invite both local and international investors to explore these exciting prospects.",
-        "Key sectors include: Tourism and hospitality, Manufacturing and processing, Agriculture and fisheries, Information and communication technology.",
-        "For more information and application procedures, please contact our investment facilitation team.",
+        regulationData.data?.announcements?.[0]?.description || "No description available.",
       ],
-      signedBy: "Investment Director",
+      signedBy: regulationData.data?.announcements?.[0]?.issued_by || "Investment Director",
       icon: "📢",
     },
     "PRESS RELEASE": {
       title: "PRESS RELEASE",
-      subtitle: "ZIPA ACHIEVEMENTS IN INVESTMENT PROMOTION",
+      subtitle: regulationData.data?.press_releases?.[0]?.title || "NO PRESS RELEASE AVAILABLE",
       content: [
-        "Zanzibar Environmental Management Authority reports significant growth in foreign direct investment for the current fiscal year. The authority has successfully facilitated over 150 new investment projects worth $2.5 billion.",
-        "This achievement demonstrates Zanzibar's growing reputation as an attractive investment destination in East Africa. The government continues to implement investor-friendly policies and improve the ease of doing business.",
-        "We remain committed to supporting investors and promoting sustainable economic development in Zanzibar.",
+        regulationData.data?.press_releases?.[0]?.description || "No description available.",
       ],
-      signedBy: "Communications Manager",
+      signedBy: regulationData.data?.press_releases?.[0]?.issued_by || "Director General",
       icon: "📰",
     },
     "REGULATION & GUIDANCE": {

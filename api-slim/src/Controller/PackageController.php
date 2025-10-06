@@ -58,14 +58,10 @@ final class PackageController
             $input = $request->getParsedBody();
 
             $validator = v::key('name', v::stringType()->length(1, 100)->notEmpty())
-                ->key('price', v::numericVal()->min(0))
-                ->key('location', v::stringType()->length(1, 200)->notEmpty())
                 ->key('description', v::stringType()->length(1, 1000)->notEmpty());
 
             $dto = [
                 'name' => $input['name'],
-                'price' => (string) $input['price'],
-                'location' => $input['location'],
                 'src' => $input['src'] ?? '',
                 'description' => $input['description'],
                 'websiteId' => $websiteId,
@@ -109,14 +105,10 @@ final class PackageController
 
             // Validate required fields
             $validator = v::key('name', v::stringType()->length(1, 100)->notEmpty())
-                ->key('price', v::numericVal()->min(0))
-                ->key('location', v::stringType()->length(1, 200)->notEmpty())
                 ->key('description', v::stringType()->length(1, 1000)->notEmpty());
 
             $dto = [
                 'name' => $input['name'],
-                'price' => (string) $input['price'],
-                'location' => $input['location'],
                 'src' => $fileInfo ? $fileInfo['src'] : ($input['src'] ?? ''),
                 'description' => $input['description'],
                 'websiteId' => $websiteId,
@@ -200,15 +192,11 @@ final class PackageController
             }
 
             $validator = v::key('name', v::optional(v::stringType()->length(1, 100)))
-                ->key('price', v::optional(v::numericVal()->min(0)))
-                ->key('location', v::optional(v::stringType()->length(1, 200)))
                 ->key('src', v::optional(v::stringType()))
                 ->key('description', v::optional(v::stringType()->length(1, 1000)));
 
             $dto = array_filter([
                 'name' => $input['name'] ?? null,
-                'price' => isset($input['price']) ? (string) $input['price'] : null,
-                'location' => $input['location'] ?? null,
                 'src' => $fileInfo ? $fileInfo['src'] : ($input['src'] ?? null),
                 'description' => $input['description'] ?? null,
             ], fn($value) => $value !== null);

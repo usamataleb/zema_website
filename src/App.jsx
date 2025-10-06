@@ -18,6 +18,7 @@ import EnvironmntalReport from "./pages/EnvironmentalReport.jsx";
 import EnvironmentalDirect from "./pages/EnvironmentalDirect.jsx";
 import PreAudit from "./pages/PreAudit.jsx";
 import NewsDetails from "./pages/NewsDetails.jsx";
+import ContactUs from "./pages/Contactus.jsx";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               <Route path="/events" element={<Events />} />
               <Route path="/expert" element={<Expert />} />
               <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contactus" element={<ContactUs />} />
               <Route path="/organization" element={<OrganizationStructure />} />
               <Route path="/NewsCard" element={<NewsCard />} />
               <Route
@@ -59,7 +61,7 @@ function App() {
                 element={<EnvironmentalDirect />}
               />
               <Route path="/PreAudit" element={<PreAudit />} />
-              
+
               <Route path="/newsdetails/:id" element={<NewsDetails />} />
             </Routes>
           </main>

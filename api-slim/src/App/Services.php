@@ -18,6 +18,10 @@ $container['carouselItemService'] = static function (Pimple\Container $container
     return new App\Service\CarouselItemService($container['db']);
 };
 
+$container['regulationService'] = static function (Pimple\Container $container): App\Service\RegulationService {
+    return new App\Service\RegulationService($container['db']);
+};
+
 $container['tagService'] = static function (Pimple\Container $container): App\Service\TagService {
     return new App\Service\TagService($container['db']);
 };
