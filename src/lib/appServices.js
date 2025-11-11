@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default class AppService {
-  static API_BASE = "/api"; 
+  static API_BASE = "http://localhost:8000"; 
 
   // Configure axios instance with default settings
   static axiosInstance = axios.create({
@@ -82,6 +82,8 @@ export default class AppService {
   static async getRegulations() {
     try {
       const response = await this.axiosInstance.get('/regulations');
+console.log("Regulations response:", response);
+
       return response.data || [];
     } catch (error) {
       console.error("AppService.getRegulations error:", error);

@@ -56,13 +56,13 @@ final class ImageController
         try {
             $websiteId = (string) $args['websiteId'];
             $uploadedFiles = $request->getUploadedFiles();
-            
+
             if (!isset($uploadedFiles['image'])) {
                 return $response->withJson(['error' => 'No file uploaded'], 400);
             }
 
             $uploadedFile = $uploadedFiles['image'];
-            
+
             if ($uploadedFile->getError() !== UPLOAD_ERR_OK) {
                 return $response->withJson(['error' => 'File upload failed'], 400);
             }
@@ -83,7 +83,7 @@ final class ImageController
             ];
 
             $this->imageService->create($dto);
-            
+
             return $response->withJson([
                 'message' => 'File uploaded successfully',
                 'file' => $fileInfo

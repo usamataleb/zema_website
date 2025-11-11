@@ -45,7 +45,7 @@ final class CarouselItemController
             }
 
             $uploadedFile = $uploadedFiles['image'];
-            
+
             if ($uploadedFile->getError() !== UPLOAD_ERR_OK) {
                 return $response->withJson(['error' => 'File upload failed'], 400);
             }

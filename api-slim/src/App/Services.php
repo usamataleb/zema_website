@@ -37,3 +37,7 @@ $container['activityLogService'] = static function (Pimple\Container $container)
 $container['packageService'] = static function (Pimple\Container $container): App\Service\PackageService {
     return new App\Service\PackageService($container['db']);
 };
+
+$container['attachmentsService'] = static function (Pimple\Container $container): App\Service\AttachmentsService {
+    return new App\Service\AttachmentsService($container['db']);
+};

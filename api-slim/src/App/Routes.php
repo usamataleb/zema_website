@@ -147,5 +147,17 @@ return static function (App $app) {
   });
 
 
+
+  // --------------- Attachments Routes ---------------- //
+  $app->group('/attachments', function ($app) {
+    $attachments = 'App\Controller\AttachmentsController:';
+
+    $app->get('', "{$attachments}getAll");
+    $app->post('', "{$attachments}create");
+    $app->get('/{id}', "{$attachments}getOne");
+    $app->put('/{id}', "{$attachments}update");
+    $app->delete('/{id}', "{$attachments}delete");
+  });
+
   return $app;
 };

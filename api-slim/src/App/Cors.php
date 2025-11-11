@@ -17,8 +17,8 @@ return static function (App $app): void {
         // List of allowed origins
         $allowedOrigins = [
             'http://localhost:3000',
-            'http://localhost:5173'
-            
+            'http://localhost:5173',
+            'http://localhost:8000'
         ];
         
         // Get the request origin
@@ -37,7 +37,7 @@ return static function (App $app): void {
         }
 
         return $response
-            ->withHeader('Access-Control-Allow-Origin', $origin)
+            ->withHeader('Access-Control-Allow-Origin', $origin, )
             ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
             ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS')
             ->withHeader('Access-Control-Allow-Credentials', 'true');

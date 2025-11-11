@@ -1,5 +1,5 @@
 # Ignore vendor directory created by Composer
-# /vendor/
+/vendor/
 
 # Ignore IDE and code editor specific files
 .vscode/

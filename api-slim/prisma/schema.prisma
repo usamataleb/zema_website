@@ -61,6 +61,25 @@ model Image {
   @@map("images")
 }
 
+model Attachment {
+  id        Int      @id @default(autoincrement())
+  src       String
+  title  String?
+  type      AttachmentType
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("attachments")
+}
+
+enum AttachmentType {
+  POLICY_AND_LAW
+  REGULATIONS_AND_GUIDANCE
+  LIST_OF_EXPERTS
+  APPROVED_PROJECTS
+  ANNOUNCEMENTS
+}
+
 model CarouselItem {
   id        Int      @id @default(autoincrement())
   image     String
