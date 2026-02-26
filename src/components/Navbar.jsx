@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../assets/css/style.css";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -54,24 +55,69 @@ const Navbar = () => {
               } `}
             >
               <div>
-                <h2 className="text-light fw-bold ">
-                  The Revolutionary Government of Zanzibar
-                </h2>
-                <h2 className="text-light fw-bold mb-0 mb-2">
-                  Zanzibar Environmental Management Authority (ZEMA)
-                </h2>
+                {/* Mobile: short name */}
+                <h2 className="text-light fw-bold mb-0 d-lg-none">ZEMA</h2>
+
+                {/* Desktop: full name */}
+                <div className="d-none d-lg-block">
+                  <h2 className="text-light fw-bold">
+                    The Revolutionary Government of Zanzibar
+                  </h2>
+                  <h2 className="text-light fw-bold mb-0 mb-2">
+                    Zanzibar Environmental Management Authority (ZEMA)
+                  </h2>
+                </div>
               </div>
               <button
                 type="button"
-                className="navbar-toggler "
+                className="d-lg-none"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse"
+                style={{
+                  background: "rgba(255,255,255,0.15)",
+                  border: "1.5px solid rgba(255,255,255,0.4)",
+                  borderRadius: "8px",
+                  padding: "8px 12px",
+                  cursor: "pointer",
+                }}
               >
-                <span className="navbar-toggler-icon"></span>
+                <i
+                  className="fa fa-bars"
+                  style={{ color: "#fff", fontSize: "1.2rem" }}
+                ></i>
               </button>
             </div>
 
             <div className="collapse navbar-collapse " id="navbarCollapse">
+              {/* Close button — visible only on mobile full-screen menu */}
+              <button
+                className="d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+                aria-label="Close menu"
+                style={{
+                  position: "absolute",
+                  top: "1.2rem",
+                  right: "1.2rem",
+                  background: "rgba(255,255,255,0.15)",
+                  border: "none",
+                  borderRadius: "50%",
+                  width: "42px",
+                  height: "42px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  zIndex: 10000,
+                }}
+              >
+                <i
+                  className="fa fa-times"
+                  style={{ color: "#fff", fontSize: "1.2rem" }}
+                ></i>
+              </button>
+
               <div className="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
                 <a href="/" className="nav-item nav-link active">
                   Home
@@ -116,13 +162,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="nav-item dropdown">
-                  <a
-                    href="/services"
-                    className="nav-link "
-                  >
+                  <a href="/services" className="nav-link ">
                     Our Services
                   </a>
-
                 </div>
 
                 <a href="project" className="nav-item nav-link">
@@ -179,97 +221,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-      <style jsx>{`
-        .navbar-scrolled {
-          background-color: rgba(255, 255, 255, 0.95) !important;
-          backdrop-filter: blur(5px);
-        }
-
-        .navbar.sticky-top {
-          top: -10px;
-          transition: 0.5s;
-        }
-
-        /* Custom styles for dropend positioning */
-        .btn-group.dropend .dropdown-menu {
-          position: absolute;
-          top: 0;
-          left: 100%;
-          margin-top: 0;
-          margin-left: 0.125rem;
-          min-width: 280px;
-          white-space: nowrap;
-        }
-
-        /* Ensure proper hover behavior for dropend */
-        .btn-group.dropend:hover .dropdown-menu {
-          display: block;
-        }
-
-        .dropdown:hover .dropdown-menu {
-          display: block;
-        }
-
-        /* Hover effects for navigation items */
-        .nav-link:hover {
-          background-color: rgba(0, 123, 255, 0.1) !important;
-          color: #007bff !important;
-          border-radius: 5px;
-          transition: all 0.3s ease;
-        }
-
-        .dropdown-item:hover {
-          background-color: #d0e6cc !important;
-          color: #0e0d0d !important;
-          transform: translateX(5px);
-          transition: all 0.3s ease;
-        }
-
-        /* Better text fitting */
-        .dropdown-menu {
-          padding: 0.5rem 0;
-        }
-
-        .dropdown-item {
-          padding: 0.5rem 1rem;
-          white-space: nowrap;
-          font-size: 0.9rem;
-          line-height: 1.4;
-        }
-
-        /* Responsive text adjustments */
-        @media (max-width: 1200px) {
-          .dropdown-item {
-            font-size: 0.85rem;
-            padding: 0.4rem 0.8rem;
-          }
-
-          .btn-group.dropend .dropdown-menu {
-            min-width: 260px;
-          }
-        }
-
-        @media (max-width: 991px) {
-          .navbar-brand img {
-            max-height: 80px !important;
-          }
-
-          /* On mobile, revert to normal dropdown behavior */
-          .btn-group.dropend .dropdown-menu {
-            position: static;
-            display: none;
-            margin-left: 1rem;
-            min-width: auto;
-          }
-
-          .dropdown-item {
-            font-size: 0.9rem;
-            white-space: normal;
-            word-wrap: break-word;
-          }
-        }
-      `}</style>
     </>
   );
 };
