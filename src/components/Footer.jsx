@@ -1,4 +1,43 @@
+import React from "react";
+import Modal from "./Modal/Modal";
+import { Button } from "react-bootstrap";
+
+
 const Footer = () => {
+  const [showModal, setShowModal] = React.useState(false);
+  const [selectedDoc, setSelectedDoc] = React.useState(null);
+
+  const docs = [
+    {
+      title: "ZEMA ACT: 2015",
+      src: "/documents/ZEMA_ACT_2015.pdf",
+    },
+    {
+      title: "Zanzibar Environmental Policy - 2013",
+      src: "/documents/Zanzibar_Environmental_Policy_2013.pdf",
+    },
+    {
+      title: "EIA Form",
+      src: "/pdf/EIA_FORM.pdf",
+    },
+    {
+      title: "ZEMA Procedural Policy",
+      src: "/pdf/SERVICES OFFERED BY THE ZANZIBAR ENVIRONMENTAL MANAGEMENT AUTHORITY FINAL.pdf",
+    },
+  ];
+
+  const handleClose = () => {
+    setShowModal(false);
+    setSelectedDoc(null);
+  };
+
+  const handleShow = (doc) => {
+    setSelectedDoc(doc);
+    setShowModal(true);
+  };
+
+
+
   return (
     <footer
       className="footer mt-5 pt-5 wow fadeIn"
@@ -114,35 +153,19 @@ const Footer = () => {
               <i className="fas fa-book me-2"></i> User Guidance
             </h5>
             <div className="footer-links">
-              <a href="#" className="d-block mb-2">
-                <i className="fas fa-file-alt me-2 small"></i> ZEMA ACT: 2015
-              </a>
-              <a href="#" className="d-block mb-2">
-                <i className="fas fa-file-alt me-2 small"></i> Zanzibar
-                Environmental Policy - 2013
-              </a>
-              {/* <a href="#" className="d-block mb-2">
-                <i className="fas fa-file-alt me-2 small"></i> Zanzibar Plastic
-                Bags Control - 2018
-              </a> */}
-              <a href="#" className="d-block mb-2">
-                <i className="fas fa-file-alt me-2 small"></i> EIA Form
-              </a>
-              <a href="#" className="d-block mb-2">
-                <i className="fas fa-file-alt me-2 small"></i> ZEMA Procedural Policy
-              </a>
-              {/* <a href="#" className="d-block mb-2">
-                <i className="fas fa-users me-2 small"></i> List of Experts /
-                Companies 2022/23
-              </a>
-              <a href="#" className="d-block mb-2">
-                <i className="fas fa-gavel me-2 small"></i> Additional
-                Regulations
-              </a>
-              <a href="#" className="d-block mb-0">
-                <i className="fas fa-balance-scale me-2 small"></i> Legal
-                Frameworks
-              </a> */}
+              {docs ? docs.map((doc, i) => (
+                <a
+                  href="#"
+                  key={i}
+                  className="d-block mb-2"
+                  onClick={() => handleShow(doc)}
+                >
+                  <i className="fas fa-arrow-right me-2 small"></i> {doc.title}
+                </a>
+              )) : (
+                <span>No documents available</span>
+              )}
+
             </div>
           </div>
         </div>
@@ -178,6 +201,38 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+         <Modal
+        show={showModal}
+        handleClose={handleClose}
+        title={selectedDoc?.title}
+        footer={
+          selectedDoc && (
+            <Button
+              variant="success"
+              href={selectedDoc.src}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download
+            </Button>
+          )
+        }
+      >
+        {selectedDoc && (
+          <div style={{ height: "80vh" }}>
+            <iframe
+              src={selectedDoc.src}
+              title={selectedDoc.title}
+              width="100%"
+              height="100%"
+              allowFullScreen
+              style={{ border: "none" }}
+            ></iframe>
+          </div>
+        )}
+      </Modal>
+
 
       <style jsx>{`
         .footer-icon-wrapper {

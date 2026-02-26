@@ -28,7 +28,6 @@ const Contact = () => {
             </h1>
             <div
               style={{
-                border: "1.5px solid #dee2e6",
                 borderRadius: "12px",
                 padding: "1.8rem",
               }}
@@ -100,7 +99,6 @@ const Contact = () => {
 
           {/* ── Right: Tabbed Map ── */}
           <div className="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
-            {/* Tab Buttons */}
             <div className="d-flex mb-0">
               {Object.entries(MAPS).map(([key, map]) => {
                 const isActive = activeTab === key;
