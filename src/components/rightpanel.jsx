@@ -1,0 +1,259 @@
+import React, { useState, useEffect } from "react";
+import AppService, { getData } from "../lib/appServices";
+
+function RightPanel() {
+  const [activeTab, setActiveTab] = useState("NOTICE");
+
+  const [regulationData, setRegulationData] = useState({});
+
+
+  useEffect(() => {
+    async function fetchRegulationData() {
+      const data = await getData("regulations/notice");
+      setRegulationData(data || {});
+    }
+    fetchRegulationData();
+  }, []);
+
+
+
+  const tabs = [
+    "NOTICE",
+    "PRESS RELEASE",
+    // "REGULATION & GUIDANCE",
+
+    //  "POLICIES & LAWS"
+    ];
+    const documentData = {
+    NOTICE: {
+      title: "SPECIAL NOTICE",
+      subtitle: regulationData[0]?.title || "NO NOTICE AVAILABLE",
+      content: [
+        regulationData[0]?.description || "No description available.",
+      ],
+      signedBy: regulationData[0]?.issued_by || "Director General",
+      icon: "🏛️",
+    },
+    "PRESS RELEASE": {
+      title: "PRESS RELEASE",
+      subtitle: regulationData.data?.press_releases?.[0]?.title || "NO PRESS RELEASE AVAILABLE",
+      content: [
+        regulationData.data?.press_releases?.[0]?.description || "No description available.",
+      ],
+      signedBy: regulationData.data?.press_releases?.[0]?.issued_by || "Director General",
+      icon: "📰",
+    },
+    "REGULATION & GUIDANCE": {
+      title: "REGULATION & GUIDANCE",
+      subtitle: "NEW REGULATIONS AND GUIDELINES IN ZANZIBAR",
+      content: [
+        "The Zanzibar Environmental Management Authority announces new regulations and guidelines to enhance environmental protection and sustainable development.",
+        "These regulations aim to streamline the investment process while ensuring compliance with environmental standards.",
+        "For detailed information and guidance, please refer to the official ZEMA website or contact our support team.",
+      ],
+      signedBy: "Investment Director",
+      icon: "📢",
+    },
+    "POLICIES & LAWS": {
+      title: "POLICIES & LAWS",
+      subtitle: "NEW POLICIES AND LAWS IN ZANZIBAR",
+      content: [
+       " The Zanzibar Environmental Management Act of 2015 serves as the primary legal framework for environmental governance in Zanzibar. It establishes the Zanzibar Environmental Management Authority",
+       " (ZEMA) as the central body responsible for coordinating and enforcing environmental management across the islands. Under this Act, ZEMA is mandated to oversee Environmental Impact Assessments (EIAs), monitor environmental activities, issue relevant permits, and take enforcement actions against individuals or entities that violate environmental laws.",
+       " The Act is guided by fundamental principles, including the precautionary principle, the polluter pays principle, and the obligation to ensure a clean, safe, and healthy environment for present and future generations.",
+      ],
+      signedBy: "Communications Manager",
+      icon: "📰",
+    },
+  };
+  const currentDocument = documentData[activeTab];
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
+  return (
+    <>
+      {/* Right Panel */}
+        <div style={sliderStyles.documentPanel} >
+          {/* Tab Navigation */}
+          <div className="d-flex" style={sliderStyles.tabNav}>
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => handleTabClick(tab)}
+                style={{
+                  ...sliderStyles.tabButton,
+                  ...(activeTab === tab ? sliderStyles.tabButtonActive : {}),
+                }}
+                onMouseEnter={(e) => {
+                  if (activeTab !== tab) {
+                    Object.assign(e.target.style, sliderStyles.tabButtonHover);
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (activeTab !== tab) {
+                    e.target.style.color = "#6c757d";
+                    e.target.style.background = "none";
+                  }
+                }}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Document Content */}
+          <div className="p-4" style={sliderStyles.documentContent}>
+            <div className="text-center">
+              <div style={sliderStyles.zipaHeader}>
+                🏛️ ZANZIBAR ENVIRONMENTAL MANAGEMENT AUTHORITY
+              </div>
+              <div style={sliderStyles.documentTitle}>
+                {currentDocument.title}
+              </div>
+              <div style={sliderStyles.documentSubtitle}>
+                {currentDocument.subtitle}
+              </div>
+            </div>
+
+            <div style={sliderStyles.documentText}>
+              {currentDocument.content.map((paragraph, index) => (
+                <p key={index} className="mb-3">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            <div className="text-center mb-4">
+              <div className="text-muted small">Issued by</div>
+              <div style={sliderStyles.signatureLine}></div>
+              <div style={sliderStyles.signatureTitle}>
+                {currentDocument.signedBy}
+              </div>
+              <div style={sliderStyles.signatureOrg}>
+                ZANZIBAR ENVIRONMENTAL MANAGEMENT AUTHORITY
+              </div>
+            </div>
+
+            <div
+              className="d-flex justify-content-between"
+              style={sliderStyles.documentFooter}
+            >
+              <span>www.zema.go.tz</span>
+              <span>info@zema.go.tz</span>
+            </div>
+          </div>
+        </div>    </>
+  );
+}
+
+const sliderStyles = {
+  darkPanel: {
+    background: "#d1cece",
+    borderRadius: "10px",
+    minHeight: "500px",
+  },
+  documentPanel: {
+    background: "white",
+    borderRadius: "10px",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+    overflow: "hidden",
+    marginTop: "50px",
+  },
+  leftPanel: {
+    maxHeight: "200px",
+    padding: "20px",
+  },
+  tabNav: {
+    borderBottom: "2px solid #e9ecef",
+  },
+  tabButton: {
+    background: "none",
+    border: "none",
+    padding: "12px 20px",
+    fontSize: "14px",
+    fontWeight: "600",
+    color: "#6c757d",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
+    borderBottom: "3px solid transparent",
+  },
+  tabButtonActive: {
+    color: "#ffc107",
+    borderBottomColor: "#ffc107",
+    background: "#f8f9fa",
+  },
+  tabButtonHover: {
+    color: "#495057",
+    background: "#f8f9fa",
+  },
+  documentContent: {
+    background: "linear-gradient(180deg, #e3f2fd, #e8f5e8)",
+    minHeight: "450px",
+  },
+  zipaHeader: {
+    color: "#1565c0",
+    fontSize: "18px",
+    fontWeight: "bold",
+    marginBottom: "15px",
+  },
+  documentTitle: {
+    fontSize: "24px",
+    fontWeight: "bold",
+    color: "#212529",
+    textDecoration: "underline",
+    marginBottom: "10px",
+  },
+  documentSubtitle: {
+    fontSize: "18px",
+    fontWeight: "600",
+    color: "#495057",
+    marginBottom: "25px",
+  },
+  documentText: {
+    color: "#495057",
+    fontSize: "14px",
+    lineHeight: "1.6",
+    textAlign: "justify",
+    marginBottom: "30px",
+  },
+  signatureLine: {
+    width: "120px",
+    height: "1px",
+    background: "#6c757d",
+    margin: "10px auto",
+  },
+  signatureTitle: {
+    fontWeight: "600",
+    color: "#212529",
+  },
+  signatureOrg: {
+    fontSize: "14px",
+    color: "#6c757d",
+  },
+  documentFooter: {
+    borderTop: "1px solid #dee2e6",
+    paddingTop: "15px",
+    fontSize: "12px",
+    color: "#6c757d",
+  },
+  navDot: {
+    width: "12px",
+    height: "12px",
+    borderRadius: "50%",
+    background: "rgba(255, 255, 255, 0.3)",
+    border: "none",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
+    margin: "0 5px",
+  },
+  navDotActive: {
+    background: "#ffc107",
+  },
+  iconPlaceholder: {
+    fontSize: "80px",
+    color: "#6c757d",
+  },
+};
+
+export default RightPanel;

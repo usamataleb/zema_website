@@ -1,0 +1,173 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model User {
+  id           Int           @id @default(autoincrement())
+  username     String        @unique
+  email        String        @unique
+  password     String
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  websites     Website[]
+  activityLogs ActivityLog[]
+
+  @@index([email, username])
+  @@map("users")
+}
+
+model Website {
+  id            Int            @id @default(autoincrement())
+  name          String         @unique
+  about         String
+  images        Image[]
+  carouselItems CarouselItem[]
+  packages      Package[]
+  userId        Int
+  user          User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  isDefault     Boolean        @default(false)
+
+  @@unique([userId, isDefault])
+  @@index([userId, name])
+  @@map("websites")
+}
+
+model Image {
+  id        Int        @id @default(autoincrement())
+  src       String
+  width     Int
+  height    Int
+  filename  String?
+  filesize  Int?
+  mimetype  String?
+  websiteId Int
+  website   Website    @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  imageTags ImageTag[]
+
+  @@unique([websiteId, src])
+  @@index([websiteId])
+  @@map("images")
+}
+
+model Attachment {
+  id          Int            @id @default(autoincrement())
+  src         String
+  title       String?
+  description String?
+  image       String?
+  type        AttachmentType
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  @@map("attachments")
+}
+
+enum AttachmentType {
+  POLICY_AND_LAW
+  REGULATIONS_AND_GUIDANCE
+  LIST_OF_EXPERTS
+  APPROVED_PROJECTS
+  ANNOUNCEMENTS
+}
+
+model CarouselItem {
+  id        Int      @id @default(autoincrement())
+  image     String
+  title     String
+  subtitle  String?
+  active    Boolean  @default(true)
+  sequence  Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  websiteId Int
+  website   Website  @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  @@unique([websiteId, sequence])
+  @@index([websiteId, sequence])
+  @@map("carousel_items")
+}
+
+model Tag {
+  id        Int        @id @default(autoincrement())
+  name      String     @unique
+  imageTags ImageTag[]
+  createdAt DateTime   @default(now())
+
+  @@map("tags")
+}
+
+model ImageTag {
+  id      Int   @id @default(autoincrement())
+  imageId Int
+  tagId   Int
+  image   Image @relation(fields: [imageId], references: [id], onDelete: Cascade)
+  tag     Tag   @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@unique([imageId, tagId])
+  @@index([imageId])
+  @@index([tagId])
+  @@map("image_tags")
+}
+
+model ActivityLog {
+  id        Int      @id @default(autoincrement())
+  userId    Int?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action    String
+  details   String?
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([userId, action])
+  @@index([createdAt])
+  @@map("activity_logs")
+}
+
+model Package {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  src         String?
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  website     Website? @relation(fields: [websiteId], references: [id])
+  websiteId   Int?
+
+  @@map("packages")
+}
+
+model Notice {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  issued_by   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Announcement {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  issued_by   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model PressRelease {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  issued_by   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
